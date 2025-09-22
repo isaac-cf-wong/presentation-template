@@ -30,32 +30,37 @@ A modern, responsive presentation template built with [reveal.js](https://reveal
 ### Create Your Presentation
 
 1. **Use this template:**
+
    - Click the "Use this template" button on GitHub
    - Create a new repository from this template
    - Clone your new repository:
-   ```bash
+
+   ```console
    git clone https://github.com/YOUR-USERNAME/YOUR-PRESENTATION-NAME.git
    cd YOUR-PRESENTATION-NAME
    ```
 
 2. **Install dependencies:**
-   ```bash
+
+   ```console
    npm install
    ```
 
 3. **Start the development server:**
-   ```bash
+
+   ```console
    npm start
    ```
 
 4. **Open your browser and navigate to:**
-   ```
+
+   ```console
    http://localhost:8000
    ```
 
 ## 📁 Project Structure
 
-```
+```console
 presentation-template/
 ├── index.html              # Main presentation file
 ├── css/
@@ -77,8 +82,9 @@ presentation-template/
 Available built-in themes: `black` (default), `white`, `league`, `beige`, `sky`, `night`, `serif`, `simple`, `solarized`
 
 To change the theme, modify the CSS import in `index.html`:
+
 ```html
-<link rel="stylesheet" href="css/theme/black.css">
+<link rel="stylesheet" href="css/theme/black.css" />
 ```
 
 ### Custom Styling
@@ -89,7 +95,7 @@ To change the theme, modify the CSS import in `index.html`:
 
 ## 📝 Creating Slides
 
-Reveal.js supports multiple ways to create slides including HTML sections, Markdown, and external slide files. 
+Reveal.js supports multiple ways to create slides including HTML sections, Markdown, and external slide files.
 
 For detailed examples and syntax, see the [reveal.js documentation](https://revealjs.com/).
 
@@ -130,12 +136,12 @@ Reveal.js can be configured by modifying the initialization options in `index.ht
 
 ```javascript
 Reveal.initialize({
-  controls: true,          // Display controls
-  progress: true,          // Show progress bar
-  center: true,            // Vertical centering
-  transition: 'slide',     // Transition style (none/fade/slide/convex/concave/zoom)
-  transitionSpeed: 'default', // Transition speed (default/fast/slow)
-  hash: true,              // Add slide number to URL
+  controls: true, // Display controls
+  progress: true, // Show progress bar
+  center: true, // Vertical centering
+  transition: "slide", // Transition style (none/fade/slide/convex/concave/zoom)
+  transitionSpeed: "default", // Transition speed (default/fast/slow)
+  hash: true, // Add slide number to URL
   // ... other options
 });
 ```
