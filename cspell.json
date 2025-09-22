@@ -2,9 +2,6 @@
   "$schema": "https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell.schema.json",
   "version": "0.2",
   "language": "en",
-  "import": [
-    "https://cdn.jsdelivr.net/npm/@cspell/dict-people-names/cspell-ext.json"
-  ],
   "dictionaries": [
     "en",
     "python",
@@ -12,7 +9,7 @@
     "html",
     "css",
     "scientific-terms",
-    "people-names",
+    "@cspell/dict-people-names",
     "ignore-words"
   ],
   "dictionaryDefinitions": [
@@ -26,7 +23,7 @@
     {
       "languageId": "markdown",
       "locale": "en",
-      "dictionaries": ["en", "people-names", "ignore-words"]
+      "dictionaries": ["en", "@cspell/dict-people-names", "ignore-words"]
     },
     {
       "languageId": "html",
@@ -35,8 +32,8 @@
         "en",
         "html",
         "css",
-        "people-names",
         "scientific-terms",
+        "@cspell/dict-people-names",
         "ignore-words"
       ]
     },
@@ -51,15 +48,19 @@
       "dictionaries": [
         "en",
         "typescript",
-        "html",
-        "people-names",
+        "@cspell/dict-people-names",
         "ignore-words"
       ]
     },
     {
       "languageId": "typescript",
       "locale": "en",
-      "dictionaries": ["en", "typescript", "people-names", "ignore-words"]
+      "dictionaries": [
+        "en",
+        "typescript",
+        "@cspell/dict-people-names",
+        "ignore-words"
+      ]
     },
     {
       "languageId": "json",
@@ -73,14 +74,14 @@
         "en",
         "python",
         "scientific-terms",
-        "people-names",
+        "@cspell/dict-people-names",
         "ignore-words"
       ]
     },
     {
       "languageId": "*",
       "locale": "en",
-      "dictionaries": ["en", "people-names", "ignore-words"]
+      "dictionaries": ["en", "@cspell/dict-people-names", "ignore-words"]
     }
   ],
   "ignorePaths": [

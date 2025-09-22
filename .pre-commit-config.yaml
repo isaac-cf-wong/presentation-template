@@ -32,7 +32,9 @@ repos:
       - id: cspell
         name: Check spelling in files
         args: ["--config", "cspell.json"]
-        files: ^.*\.(tex|py|rst|md|js|html)$
+        files: \.(md|js|ts|html|css)$
+        additional_dependencies:
+          - "@cspell/dict-people-names"
       - id: cspell
         name: check commit message spelling
         args:
