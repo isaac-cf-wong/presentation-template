@@ -1,7 +1,8 @@
 # Presentation Template 🎯
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
-[![CI](https://github.com/isaac-cf-wong/presentation-template/workflows/ci/badge.svg)](https://github.com/isaac-cf-wong/presentation-template/actions)
+[![CI](https://github.com/isaac-cf-wong/presentation-template/actions/workflows/ci.yml/badge.svg)](https://github.com/isaac-cf-wong/presentation-template/actions/workflows/ci.yml)
+[![Publish](https://github.com/isaac-cf-wong/presentation-template/actions/workflows/publish.yml/badge.svg)](https://isaac-cf-wong.github.io/presentation-template/)
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit)](https://github.com/pre-commit/pre-commit)
 [![cspell](https://img.shields.io/badge/cspell-checked-brightgreen)](https://cspell.org/)
 [![Reveal.js](https://img.shields.io/badge/reveal.js-4.x-orange.svg)](https://revealjs.com/)
