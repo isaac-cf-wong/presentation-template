@@ -15,8 +15,11 @@
     "slides",
     "html"
   ],
-  "author": "Isaac Wong",
+  "author": "Isaac C. F. Wong",
   "license": "MIT",
+  "engines": {
+    "node": ">=14.14.0"
+  },
   "dependencies": {
     "reveal.js": "^5.2.1"
   },
