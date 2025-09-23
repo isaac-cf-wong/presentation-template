@@ -1,8 +1,13 @@
+corejs
+esmodule
+gulpfile
 Hattab
 indexh
 lighthouserc
 mathjax
 Mbps
 noescape
+pipeable
+polyfilling
 slidechanged
 WCAG
