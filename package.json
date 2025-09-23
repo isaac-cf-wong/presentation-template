@@ -1,6 +1,6 @@
 {
   "name": "presentation-template",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "A modern, responsive presentation template built with reveal.js",
   "main": "index.html",
   "scripts": {
