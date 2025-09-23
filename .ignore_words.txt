@@ -1,4 +1,6 @@
 Hattab
+indexh
 lighthouserc
 noescape
+slidechanged
 WCAG
