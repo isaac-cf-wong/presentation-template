@@ -105,7 +105,9 @@ function addHoverEffects() {
 
 // Slide event listeners
 Reveal.addEventListener("slidechanged", function (event) {
-  const slideNumber = event.indexh + 1;
+  const indices = Reveal.getIndices();
+  const slideNumber =
+    indices.v > 0 ? `${indices.h + 1}.${indices.v + 1}` : `${indices.h + 1}`;
   console.log(`📍 Moved to slide ${slideNumber}`);
 
   // Add any slide-specific behavior here
