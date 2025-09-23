@@ -1,2 +1,4 @@
 Hattab
+lighthouserc
 noescape
+WCAG

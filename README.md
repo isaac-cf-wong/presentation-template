@@ -52,10 +52,20 @@ A modern, responsive presentation template built with [reveal.js](https://reveal
    npm start
    ```
 
-4. **Open your browser and navigate to:**
+   This will start a development server with live reload at `http://localhost:8000`
+
+4. **Build for production:**
 
    ```console
-   http://localhost:8000
+   npm run build
+   ```
+
+   This creates an optimized version in the `dist/` folder ready for deployment.
+
+5. **Run tests:**
+
+   ```console
+   npm test
    ```
 
 ## 📁 Project Structure
@@ -129,6 +139,99 @@ For detailed examples and syntax, see the [reveal.js documentation](https://reve
 2. Set build command to `npm run build` (if using build process)
 3. Set publish directory to root or build output
 4. Deploy automatically on every push
+
+## 🧪 Testing
+
+This template includes comprehensive testing infrastructure to ensure quality and performance:
+
+### Available Tests
+
+- **Unit Tests**: JavaScript functionality validation with Jest
+- **Integration Tests**: Presentation structure and accessibility testing
+- **Performance Tests**: Lighthouse CI for performance, accessibility, and SEO validation
+- **Pre-commit Hooks**: Code quality enforcement (spelling, formatting, linting)
+
+### Running Tests
+
+```bash
+# Run all tests
+npm test
+
+# Run tests in watch mode (for development)
+npm run test:watch
+
+# Generate test coverage report
+npm run test:coverage
+
+# Run Lighthouse performance audit
+npm run lighthouse
+
+# Run pre-commit hooks manually
+npm run precommit
+```
+
+### Continuous Integration
+
+The repository includes GitHub Actions workflows that automatically:
+
+- ✅ **Test** presentation structure and functionality
+- ✅ **Validate** HTML, CSS, and JavaScript quality
+- ✅ **Check** accessibility compliance (WCAG 2.1)
+- ✅ **Audit** performance metrics with Lighthouse
+- ✅ **Verify** cross-browser compatibility
+
+### Test Configuration
+
+- **Jest Config**: `jest.config.js` - Unit testing configuration
+- **Lighthouse Config**: `lighthouserc.js` - Performance testing thresholds
+- **Pre-commit Config**: `.pre-commit-config.yaml` - Code quality hooks
+
+### Quality Standards
+
+The testing suite enforces:
+
+- **Performance**: 80%+ Lighthouse score
+- **Accessibility**: 90%+ compliance (strict WCAG standards)
+- **Best Practices**: 80%+ score for modern web standards
+- **SEO**: 80%+ search engine optimization
+- **Code Coverage**: 70%+ test coverage threshold
+
+## ⚡ Build System
+
+This template uses **Gulp** as the build system while maintaining familiar npm script interfaces:
+
+### Available Commands
+
+```bash
+# Development
+npm start          # Start development server with live reload
+npm run dev        # Same as npm start
+
+# Production
+npm run build      # Build optimized files to dist/
+npm run serve:dist # Serve the built version
+
+# Testing & Quality
+npm test           # Run all tests
+npm run test:watch # Run tests in watch mode
+npm run lint       # Run linting checks
+```
+
+### Build Process
+
+The build system:
+
+- 🧹 **Cleans** the `dist/` directory
+- 📁 **Copies** all presentation files (HTML, CSS, JS, images)
+- 📦 **Bundles** reveal.js dependencies
+- ✅ **Optimizes** for production deployment
+
+### Under the Hood
+
+- **Gulp 5.x** - Modern build system with ES6+ support
+- **gulp-connect** - Development server with live reload
+- **Jest** - JavaScript testing framework
+- **Lighthouse CI** - Performance and accessibility auditing
 
 ## 🔧 Configuration
 
