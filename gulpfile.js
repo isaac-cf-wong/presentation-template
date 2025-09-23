@@ -268,25 +268,6 @@ function copyFiles() {
   });
 }
 
-// Helper function to copy directory recursively
-function copyDirectory(src, dest) {
-  if (!fs.existsSync(dest)) {
-    fs.mkdirSync(dest, { recursive: true });
-  }
-
-  const items = fs.readdirSync(src);
-  items.forEach((item) => {
-    const srcPath = path.join(src, item);
-    const destPath = path.join(dest, item);
-
-    if (fs.statSync(srcPath).isDirectory()) {
-      copyDirectory(srcPath, destPath);
-    } else {
-      fs.copyFileSync(srcPath, destPath);
-    }
-  });
-}
-
 // Start development server
 function serve(done) {
   connect.server({
