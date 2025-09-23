@@ -1,0 +1,175 @@
+/* Custom styles for your presentation template */
+
+/* Root variables for easy theming */
+
+:root {
+  --main-color: #2196f3;
+  --accent-color: #ff5722;
+  --text-color: #fff;
+  --background-color: #1e1e1e;
+  --code-background: #2d2d2d;
+}
+
+/* Custom slide backgrounds */
+
+.reveal .slides section[data-background-gradient] {
+  color: var(--text-color);
+}
+
+/* Enhanced code blocks */
+
+.reveal pre {
+  box-shadow: 0 4px 8px rgb(0 0 0 / 30%);
+  border-radius: 8px;
+  margin: 1em 0;
+}
+
+.reveal pre code {
+  background-color: var(--code-background);
+  padding: 1em;
+  border-radius: 8px;
+  font-size: 0.9em;
+  line-height: 1.4;
+}
+
+/* Fragment animations */
+
+.reveal .fragment.highlight-current-blue {
+  opacity: 1;
+  visibility: inherit;
+}
+
+.reveal .fragment.highlight-current-blue.current-fragment {
+  color: var(--main-color);
+  font-weight: bold;
+}
+
+/* Custom list styling */
+
+.reveal ul li {
+  margin-bottom: 0.5em;
+}
+
+.reveal ul li::marker {
+  color: var(--main-color);
+}
+
+/* Enhanced images */
+
+.reveal img {
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgb(0 0 0 / 20%);
+}
+
+/* Progress bar customization */
+
+.reveal .progress {
+  color: var(--main-color);
+}
+
+/* Speaker notes styling (for development) */
+
+.reveal .speaker-notes {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Mobile responsiveness */
+@media (width <= 768px) {
+  .reveal h1 {
+    font-size: 2.5em;
+  }
+
+  .reveal h2 {
+    font-size: 2em;
+  }
+
+  .reveal h3 {
+    font-size: 1.5em;
+  }
+
+  .reveal pre code {
+    font-size: 0.8em;
+  }
+}
+
+/* Print styles for PDF export */
+@media print {
+  .reveal .slides section {
+    page-break-after: always;
+  }
+
+  .reveal .fragment {
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+}
+
+/* Custom button styles */
+
+.custom-button {
+  background-color: var(--main-color);
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.custom-button:hover {
+  background-color: #1976d2;
+  text-decoration: none;
+  color: white;
+}
+
+/* Grid layout helper */
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+/* Highlight box */
+
+.highlight-box {
+  background-color: rgb(33 150 243 / 10%);
+  border-left: 4px solid var(--main-color);
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 0 8px 8px 0;
+}
+
+/* Logo positioning */
+
+.logo {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 80px;
+  height: auto;
+  z-index: 100;
+}
+
+/* Custom slide numbers */
+
+.reveal .slide-number {
+  background-color: var(--main-color);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-weight: bold;
+}

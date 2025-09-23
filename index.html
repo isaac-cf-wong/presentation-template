@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Resource hints for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+    <link rel="dns-prefetch" href="//cdn.jsdelivr.net" />
+
+    <title>Presentation Template</title>
+    <meta
+      name="description"
+      content="A modern presentation built with reveal.js"
+    />
+    <meta name="author" content="Your Name" />
+
+    <!-- Favicon (early for quick load) -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+
+    <!-- Critical CSS (reveal.js core) -->
+    <link rel="stylesheet" href="node_modules/reveal.js/dist/reveal.css" />
+    <!-- Theme CSS (change theme here) -->
+    <link
+      rel="stylesheet"
+      href="node_modules/reveal.js/dist/theme/black.css"
+      id="theme"
+    />
+
+    <!-- Preload critical JavaScript -->
+    <link
+      rel="preload"
+      href="node_modules/reveal.js/dist/reveal.js"
+      as="script"
+    />
+
+    <!-- Non-critical CSS (can load async) -->
+    <link
+      rel="preload"
+      href="node_modules/reveal.js/plugin/highlight/monokai.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript
+      ><link
+        rel="stylesheet"
+        href="node_modules/reveal.js/plugin/highlight/monokai.css"
+    /></noscript>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/custom.css" />
+  </head>
+
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <!-- Title Slide -->
+        <section
+          data-background-gradient="linear-gradient(to bottom, #283048, #859398)"
+        >
+          <h1>Presentation Template</h1>
+          <h3>Built with reveal.js</h3>
+          <p>
+            <small>Created by <span>Your Name</span></small>
+          </p>
+          <aside class="notes">
+            Welcome to your presentation template. This is the title slide. You
+            can add speaker notes here that won't be visible to the audience.
+          </aside>
+        </section>
+
+        <!-- About Section -->
+        <section>
+          <h2>About This Template</h2>
+          <ul>
+            <li class="fragment">🎯 Modern and responsive design</li>
+            <li class="fragment">📱 Works on desktop, tablet, and mobile</li>
+            <li class="fragment">🎨 Multiple themes available</li>
+            <li class="fragment">📝 Markdown support</li>
+            <li class="fragment">🖼️ Rich media support</li>
+          </ul>
+          <aside class="notes">
+            This slide demonstrates fragment animations. Each bullet point will
+            appear one by one when you advance.
+          </aside>
+        </section>
+
+        <!-- Features Section -->
+        <section>
+          <section>
+            <h2>Features</h2>
+            <p>Explore the capabilities of this template</p>
+            <p><small>↓ Navigate down to see more</small></p>
+          </section>
+
+          <section>
+            <h3>Code Highlighting</h3>
+            <pre><code data-trim data-noescape>
+function createPresentation() {
+    const slides = [
+        'Introduction',
+        'Content',
+        'Conclusion'
+    ];
+
+    return slides.map(slide => ({
+        title: slide,
+        content: 'Amazing content here!'
+    }));
+}
+                    </code></pre>
+          </section>
+
+          <section>
+            <h3>Math Support</h3>
+            <p>You can include mathematical equations:</p>
+            <p>$$E = mc^2$$</p>
+            <p>$$\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}$$</p>
+          </section>
+
+          <section>
+            <h3>Media Support</h3>
+            <div
+              style="
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+              "
+            >
+              <div>
+                <h4>Images</h4>
+                <img
+                  src="images/sample-image.jpg"
+                  alt="Sample"
+                  style="
+                    width: 200px;
+                    height: 150px;
+                    object-fit: cover;
+                    border-radius: 8px;
+                  "
+                />
+              </div>
+              <div>
+                <h4>Videos</h4>
+                <video
+                  width="200"
+                  height="150"
+                  controls
+                  style="border-radius: 8px"
+                >
+                  <source src="videos/sample-video.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            </div>
+          </section>
+        </section>
+
+        <!-- Markdown Example -->
+        <section data-markdown>
+          <textarea data-template>
+                    ## Markdown Support
+
+                    You can write slides in **Markdown**!
+
+                    - Simple and clean syntax
+                    - Easy to maintain
+                    - Version control friendly
+
+                    > "Simplicity is the ultimate sophistication." - Leonardo da Vinci
+
+                    ### Code blocks work too:
+                    ```javascript
+                    const awesome = true;
+                    console.log('This template is', awesome ? 'amazing!' : 'okay');
+                    ```
+                </textarea
+          >
+        </section>
+
+        <!-- Themes Section -->
+        <section>
+          <h2>Available Themes</h2>
+          <p>Switch between different themes by changing the CSS link:</p>
+          <div
+            style="
+              display: grid;
+              grid-template-columns: repeat(3, 1fr);
+              gap: 1rem;
+              font-size: 0.8em;
+            "
+          >
+            <div>• black (current)</div>
+            <div>• white</div>
+            <div>• league</div>
+            <div>• beige</div>
+            <div>• sky</div>
+            <div>• night</div>
+            <div>• serif</div>
+            <div>• simple</div>
+            <div>• solarized</div>
+          </div>
+          <p>
+            <small
+              >Edit the theme link in index.html to change appearance</small
+            >
+          </p>
+        </section>
+
+        <!-- Getting Started -->
+        <section>
+          <h2>Getting Started</h2>
+          <ol>
+            <li>Clone or use this template repository</li>
+            <li>Run <code>npm install</code> to install dependencies</li>
+            <li>Start development server with <code>npm start</code></li>
+            <li>Edit <code>index.html</code> to create your presentation</li>
+            <li>Customize styles in <code>css/custom.css</code></li>
+          </ol>
+          <p><small>Check the README for detailed instructions</small></p>
+        </section>
+
+        <!-- Thank You -->
+        <section
+          data-background-gradient="linear-gradient(to bottom, #134E5E, #71B280)"
+        >
+          <h1>Thank You!</h1>
+          <h3>Questions?</h3>
+          <p>
+            <small>
+              <a href="https://github.com/isaac-cf-wong/presentation-template"
+                >GitHub Repository</a
+              >
+              |
+              <a href="https://revealjs.com/">Reveal.js Documentation</a>
+            </small>
+          </p>
+          <aside class="notes">
+            This is the final slide. Thank your audience and open the floor for
+            questions. Remember to provide links to resources for follow-up.
+          </aside>
+        </section>
+      </div>
+    </div>
+
+    <!-- Reveal.js JavaScript (main script loads synchronously) -->
+    <script src="node_modules/reveal.js/dist/reveal.js"></script>
+    <!-- Reveal.js plugins (deferred for better performance) -->
+    <script src="node_modules/reveal.js/plugin/notes/notes.js" defer></script>
+    <script
+      src="node_modules/reveal.js/plugin/markdown/markdown.js"
+      defer
+    ></script>
+    <script
+      src="node_modules/reveal.js/plugin/highlight/highlight.js"
+      defer
+    ></script>
+    <script src="node_modules/reveal.js/plugin/math/math.js" defer></script>
+    <script src="node_modules/reveal.js/plugin/search/search.js" defer></script>
+    <script src="node_modules/reveal.js/plugin/zoom/zoom.js" defer></script>
+
+    <!-- Custom JavaScript -->
+    <script src="js/custom.js" defer></script>
+
+    <script>
+      // Initialize Reveal.js when plugins are ready
+      // Use a small delay to ensure deferred plugin scripts have loaded
+      function initializeReveal() {
+        if (
+          typeof Reveal !== "undefined" &&
+          typeof RevealMarkdown !== "undefined" &&
+          typeof RevealHighlight !== "undefined"
+        ) {
+          Reveal.initialize({
+            // Display presentation control arrows
+            controls: true,
+
+            // Help the user learn the controls
+            controlsTutorial: true,
+
+            // Display a presentation progress bar
+            progress: true,
+
+            // Display the page number of the current slide
+            slideNumber: "c/t",
+
+            // Add the current slide number to the URL hash
+            hash: true,
+
+            // Push each slide change to the browser history
+            history: false,
+
+            // Enable keyboard shortcuts for navigation
+            keyboard: true,
+
+            // Enable the slide overview mode
+            overview: true,
+
+            // Vertical centering of slides
+            center: true,
+
+            // Enables touch navigation on devices with touch input
+            touch: true,
+
+            // Loop the presentation
+            loop: false,
+
+            // Change the presentation direction to be RTL
+            rtl: false,
+
+            // Randomizes the order of slides each time the presentation loads
+            shuffle: false,
+
+            // Turns fragments on and off globally
+            fragments: true,
+
+            // Flags if the presentation is running in an embedded mode
+            embedded: false,
+
+            // Flags if we should show a help overlay when the question mark
+            // key is pressed
+            help: true,
+
+            // Flags if speaker notes should be visible to all viewers
+            showNotes: false,
+
+            // Global override for auto-playing embedded media (video/audio/iframe)
+            autoPlayMedia: null,
+
+            // Number of milliseconds between automatically proceeding to the
+            // next slide, disabled when set to 0
+            autoSlide: 0,
+
+            // Stop auto-sliding after user input
+            autoSlideStoppable: true,
+
+            // Enable slide navigation via mouse wheel
+            mouseWheel: false,
+
+            // Hides the address bar on mobile devices
+            hideAddressBar: true,
+
+            // Opens links in an iframe preview overlay
+            previewLinks: false,
+
+            // Transition style
+            transition: "slide", // none/fade/slide/convex/concave/zoom
+
+            // Transition speed
+            transitionSpeed: "default", // default/fast/slow
+
+            // Transition style for full page slide backgrounds
+            backgroundTransition: "fade", // none/fade/slide/convex/concave/zoom
+
+            // Number of slides away from the current that are visible
+            viewDistance: 3,
+
+            // Number of slides away from the current that are visible on mobile
+            mobileViewDistance: 2,
+
+            // The display mode that will be used to show slides
+            display: "block",
+
+            // Load reveal.js plugins
+            plugins: [
+              RevealMarkdown,
+              RevealHighlight,
+              RevealNotes,
+              RevealMath.KaTeX,
+              RevealSearch,
+              RevealZoom,
+            ],
+          });
+        } else {
+          // Retry after a short delay if plugins aren't ready yet
+          setTimeout(initializeReveal, 100);
+        }
+      }
+
+      // Start initialization when DOM is ready
+      document.addEventListener("DOMContentLoaded", function () {
+        initializeReveal();
+      });
+    </script>
+  </body>
+</html>

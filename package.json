@@ -1,0 +1,46 @@
+{
+  "name": "presentation-template",
+  "version": "0.1.0",
+  "description": "A modern, responsive presentation template built with reveal.js",
+  "main": "index.html",
+  "scripts": {
+    "test": "gulp test",
+    "start": "gulp serve",
+    "build": "gulp build"
+  },
+  "keywords": [
+    "reveal.js",
+    "presentation",
+    "template",
+    "slides",
+    "html"
+  ],
+  "author": "Isaac C. F. Wong",
+  "license": "MIT",
+  "engines": {
+    "node": ">=14.14.0"
+  },
+  "dependencies": {
+    "reveal.js": "^5.2.1"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1",
+    "@lhci/cli": "^0.15.1",
+    "gulp": "^5.0.0",
+    "gulp-connect": "^5.7.0",
+    "yargs": "^17.7.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/isaac-cf-wong/presentation-template.git"
+  },
+  "bugs": {
+    "url": "https://github.com/isaac-cf-wong/presentation-template/issues"
+  },
+  "homepage": "https://github.com/isaac-cf-wong/presentation-template#readme",
+  "overrides": {
+    "rimraf": "^5.0.0",
+    "glob": "^10.0.0",
+    "inflight": "npm:@isaacs/inflight@^1.0.0"
+  }
+}

@@ -74,6 +74,7 @@ repos:
     rev: v16.9.0
     hooks:
       - id: stylelint
+        args: [--fix]
         files: \.(css|scss|sass)$
         additional_dependencies:
           - stylelint@16.9.0

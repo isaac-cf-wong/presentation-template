@@ -82,3 +82,6 @@ pnpm-lock.yaml
 # Local configuration overrides
 local-config.json
 custom-config.js
+
+# Lighthourse reports
+.lighthouseci/
