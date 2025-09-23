@@ -1,10 +1,16 @@
 # Presentation Template 🎯
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
-[![CI](https://github.com/isaac-cf-wong/presentation-template/workflows/CI/badge.svg)](https://github.com/isaac-cf-wong/presentation-template/actions)
+[![CI](https://github.com/isaac-cf-wong/presentation-template/workflows/ci/badge.svg)](https://github.com/isaac-cf-wong/presentation-template/actions)
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit)](https://github.com/pre-commit/pre-commit)
 [![cspell](https://img.shields.io/badge/cspell-checked-brightgreen)](https://cspell.org/)
 [![Reveal.js](https://img.shields.io/badge/reveal.js-4.x-orange.svg)](https://revealjs.com/)
+
+> **⚠️ Experimental Template Disclaimer**
+>
+> This presentation template is currently in **experimental stage** and is built with GitHub Copilot assistance.
+> While functional, it has not been fully tested in all environments and scenarios. Use at your own discretion for production presentations.
+> Feedback and contributions are welcome to help improve stability and features.
 
 A modern, responsive presentation template built with [reveal.js](https://revealjs.com/) that helps you create stunning HTML presentations with ease.
 
