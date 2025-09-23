@@ -243,8 +243,8 @@ function createPresentation() {
       </div>
     </div>
 
-    <!-- Reveal.js JavaScript (optimized loading) -->
-    <script src="node_modules/reveal.js/dist/reveal.js" defer></script>
+    <!-- Reveal.js JavaScript (main script loads synchronously) -->
+    <script src="node_modules/reveal.js/dist/reveal.js"></script>
     <!-- Reveal.js plugins (deferred for better performance) -->
     <script src="node_modules/reveal.js/plugin/notes/notes.js" defer></script>
     <script
@@ -263,10 +263,14 @@ function createPresentation() {
     <script src="js/custom.js" defer></script>
 
     <script>
-      // Initialize Reveal.js when DOM and scripts are ready
-      document.addEventListener("DOMContentLoaded", function () {
-        // Ensure Reveal is loaded before initializing
-        if (typeof Reveal !== "undefined") {
+      // Initialize Reveal.js when plugins are ready
+      // Use a small delay to ensure deferred plugin scripts have loaded
+      function initializeReveal() {
+        if (
+          typeof Reveal !== "undefined" &&
+          typeof RevealMarkdown !== "undefined" &&
+          typeof RevealHighlight !== "undefined"
+        ) {
           Reveal.initialize({
             // Display presentation control arrows
             controls: true,
@@ -368,9 +372,14 @@ function createPresentation() {
             ],
           });
         } else {
-          // Fallback if Reveal.js is not loaded
-          console.error("Reveal.js not loaded");
+          // Retry after a short delay if plugins aren't ready yet
+          setTimeout(initializeReveal, 100);
         }
+      }
+
+      // Start initialization when DOM is ready
+      document.addEventListener("DOMContentLoaded", function () {
+        initializeReveal();
       });
     </script>
   </body>
