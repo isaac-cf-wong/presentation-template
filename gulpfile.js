@@ -127,13 +127,12 @@ function serve(done) {
   console.log("🔧 Development mode with live reload enabled");
 
   // Watch for file changes
-  gulp.watch(
-    ["index.html", "css/**/*.css", "js/**/*.js", "images/**/*"],
-    function (cb) {
-      console.log("📝 File change detected, reloading browser...");
-      return gulp.src("index.html").pipe(connect.reload());
-    }
-  );
+  gulp.watch(["*.html", "css/**/*.css", "js/**/*.js", "images/**/*"], function (
+    cb
+  ) {
+    console.log("📝 File change detected, reloading browser...");
+    return gulp.src("index.html").pipe(connect.reload());
+  });
 
   console.log("👀 Watching files for changes...");
   console.log("Press Ctrl+C to stop the server");

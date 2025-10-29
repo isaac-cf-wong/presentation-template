@@ -21,11 +21,7 @@
     <!-- Critical CSS (reveal.js core) -->
     <link rel="stylesheet" href="node_modules/reveal.js/dist/reveal.css" />
     <!-- Theme CSS (change theme here) -->
-    <link
-      rel="stylesheet"
-      href="node_modules/reveal.js/dist/theme/black.css"
-      id="theme"
-    />
+    <link rel="stylesheet" href="css/kuleuven.css" id="theme" />
 
     <!-- Preload critical JavaScript -->
     <link
@@ -48,198 +44,19 @@
     /></noscript>
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/custom.css" />
+    <!-- <link rel="stylesheet" href="css/custom.css" /> -->
   </head>
 
   <body>
     <div class="reveal">
       <div class="slides">
-        <!-- Title Slide -->
-        <section
-          data-background-gradient="linear-gradient(to bottom, #283048, #859398)"
-        >
-          <h1>Presentation Template</h1>
-          <h3>Built with reveal.js</h3>
-          <p>
-            <small>Created by <span>Your Name</span></small>
-          </p>
-          <aside class="notes">
-            Welcome to your presentation template. This is the title slide. You
-            can add speaker notes here that won't be visible to the audience.
-          </aside>
-        </section>
-
-        <!-- About Section -->
-        <section>
-          <h2>About This Template</h2>
-          <ul>
-            <li class="fragment">🎯 Modern and responsive design</li>
-            <li class="fragment">📱 Works on desktop, tablet, and mobile</li>
-            <li class="fragment">🎨 Multiple themes available</li>
-            <li class="fragment">📝 Markdown support</li>
-            <li class="fragment">🖼️ Rich media support</li>
-          </ul>
-          <aside class="notes">
-            This slide demonstrates fragment animations. Each bullet point will
-            appear one by one when you advance.
-          </aside>
-        </section>
-
-        <!-- Features Section -->
-        <section>
-          <section>
-            <h2>Features</h2>
-            <p>Explore the capabilities of this template</p>
-            <p><small>↓ Navigate down to see more</small></p>
-          </section>
-
-          <section>
-            <h3>Code Highlighting</h3>
-            <pre><code data-trim data-noescape>
-function createPresentation() {
-    const slides = [
-        'Introduction',
-        'Content',
-        'Conclusion'
-    ];
-
-    return slides.map(slide => ({
-        title: slide,
-        content: 'Amazing content here!'
-    }));
-}
-                    </code></pre>
-          </section>
-
-          <section>
-            <h3>Math Support</h3>
-            <p>You can include mathematical equations:</p>
-            <p>$$E = mc^2$$</p>
-            <p>$$\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}$$</p>
-          </section>
-
-          <section>
-            <h3>Media Support</h3>
-            <div
-              style="
-                display: flex;
-                justify-content: space-around;
-                align-items: center;
-              "
-            >
-              <div>
-                <h4>Images</h4>
-                <img
-                  src="images/sample-image.jpg"
-                  alt="Sample"
-                  style="
-                    width: 200px;
-                    height: 150px;
-                    object-fit: cover;
-                    border-radius: 8px;
-                  "
-                />
-              </div>
-              <div>
-                <h4>Videos</h4>
-                <video
-                  width="200"
-                  height="150"
-                  controls
-                  style="border-radius: 8px"
-                >
-                  <source src="videos/sample-video.mp4" type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
-              </div>
-            </div>
-          </section>
-        </section>
-
-        <!-- Markdown Example -->
-        <section data-markdown>
-          <textarea data-template>
-                    ## Markdown Support
-
-                    You can write slides in **Markdown**!
-
-                    - Simple and clean syntax
-                    - Easy to maintain
-                    - Version control friendly
-
-                    > "Simplicity is the ultimate sophistication." - Leonardo da Vinci
-
-                    ### Code blocks work too:
-                    ```javascript
-                    const awesome = true;
-                    console.log('This template is', awesome ? 'amazing!' : 'okay');
-                    ```
-                </textarea
-          >
-        </section>
-
-        <!-- Themes Section -->
-        <section>
-          <h2>Available Themes</h2>
-          <p>Switch between different themes by changing the CSS link:</p>
-          <div
-            style="
-              display: grid;
-              grid-template-columns: repeat(3, 1fr);
-              gap: 1rem;
-              font-size: 0.8em;
-            "
-          >
-            <div>• black (current)</div>
-            <div>• white</div>
-            <div>• league</div>
-            <div>• beige</div>
-            <div>• sky</div>
-            <div>• night</div>
-            <div>• serif</div>
-            <div>• simple</div>
-            <div>• solarized</div>
-          </div>
-          <p>
-            <small
-              >Edit the theme link in index.html to change appearance</small
-            >
-          </p>
-        </section>
-
-        <!-- Getting Started -->
-        <section>
-          <h2>Getting Started</h2>
-          <ol>
-            <li>Clone or use this template repository</li>
-            <li>Run <code>npm install</code> to install dependencies</li>
-            <li>Start development server with <code>npm start</code></li>
-            <li>Edit <code>index.html</code> to create your presentation</li>
-            <li>Customize styles in <code>css/custom.css</code></li>
-          </ol>
-          <p><small>Check the README for detailed instructions</small></p>
-        </section>
-
-        <!-- Thank You -->
-        <section
-          data-background-gradient="linear-gradient(to bottom, #134E5E, #71B280)"
-        >
-          <h1>Thank You!</h1>
-          <h3>Questions?</h3>
-          <p>
-            <small>
-              <a href="https://github.com/isaac-cf-wong/presentation-template"
-                >GitHub Repository</a
-              >
-              |
-              <a href="https://revealjs.com/">Reveal.js Documentation</a>
-            </small>
-          </p>
-          <aside class="notes">
-            This is the final slide. Thank your audience and open the floor for
-            questions. Remember to provide links to resources for follow-up.
-          </aside>
-        </section>
+        <section data-external="title.html"></section>
+        <section data-external="about.html"></section>
+        <section data-external="feature.html"></section>
+        <section data-external="markdown.html"></section>
+        <section data-external="theme.html"></section>
+        <section data-external="getting_started.html"></section>
+        <section data-external="thank_you.html"></section>
       </div>
     </div>
 
@@ -369,6 +186,16 @@ function createPresentation() {
               RevealMath.KaTeX,
               RevealSearch,
               RevealZoom,
+            ],
+            dependencies: [
+              {
+                src: "node_modules/reveal_external/external/external.js",
+                condition: function () {
+                  return !!document.querySelector(
+                    "[data-external],[data-external-replace]"
+                  );
+                },
+              },
             ],
           });
         } else {
