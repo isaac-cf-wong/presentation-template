@@ -50,11 +50,13 @@ function build() {
         fs.mkdirSync("dist", { recursive: true });
       }
 
-      // Copy main HTML file
-      if (fs.existsSync("index.html")) {
-        fs.copyFileSync("index.html", "dist/index.html");
-        console.log("✅ Copied index.html");
-      }
+      // Copy all HTML files from root
+      const rootFiles = fs.readdirSync(".");
+      const htmlFiles = rootFiles.filter((file) => file.endsWith(".html"));
+      htmlFiles.forEach((file) => {
+        fs.copyFileSync(file, `dist/${file}`);
+        console.log(`✅ Copied ${file}`);
+      });
 
       // Copy directories if they exist
       const dirsToCopy = ["css", "js", "images", "videos"];
