@@ -27,7 +27,7 @@ repos:
       - id: fix-byte-order-marker
 
   - repo: https://github.com/streetsidesoftware/cspell-cli
-    rev: v9.3.3 # Keep this version or update to the latest stable
+    rev: v9.4.0 # Keep this version or update to the latest stable
     hooks:
       - id: cspell
         name: Check spelling in files
@@ -64,14 +64,14 @@ repos:
         description: Detect and block secrets from committing to the codebase
 
   - repo: https://github.com/igorshubovych/markdownlint-cli
-    rev: v0.45.0
+    rev: v0.47.0
     hooks:
       - id: markdownlint
         args: ["--fix"]
         files: \.(md|markdown)$
 
   - repo: https://github.com/thibaudcolas/pre-commit-stylelint
-    rev: v16.25.0
+    rev: v16.26.1
     hooks:
       - id: stylelint
         args: [--fix]
