@@ -10,12 +10,12 @@ Explore the capabilities of this template
 
 ```javascript
 function createPresentation() {
-    const slides = ['Introduction', 'Content', 'Conclusion']
+  const slides = ["Introduction", "Content", "Conclusion"];
 
-    return slides.map((slide) => ({
-        title: slide,
-        content: 'Amazing content here!',
-    }))
+  return slides.map((slide) => ({
+    title: slide,
+    content: "Amazing content here!",
+  }));
 }
 ```
 

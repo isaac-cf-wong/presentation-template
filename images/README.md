@@ -32,8 +32,8 @@ Add these sample files to demonstrate the template:
 
 <!-- Background image -->
 <section data-background="images/background.jpg">
-    <!-- Logo (positioned with CSS) -->
-    <img src="images/logo.png" class="logo" alt="Logo" />
+  <!-- Logo (positioned with CSS) -->
+  <img src="images/logo.png" class="logo" alt="Logo" />
 </section>
 ```
 
