@@ -1,96 +1,96 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Presentation Template</title>
-    <meta
-      name="description"
-      content="A modern presentation built with reveal.js"
-    />
-    <meta name="author" content="Your Name" />
+        <title>Presentation Template</title>
+        <meta
+            name="description"
+            content="A modern presentation built with reveal.js"
+        />
+        <meta name="author" content="Your Name" />
 
-    <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
-    <link rel="stylesheet" href="node_modules/reveal.js/dist/reveal.css" />
-    <!-- Theme CSS (change theme here) -->
-    <link
-      rel="stylesheet"
-      href="node_modules/reveal.js/dist/theme/black.css"
-      id="theme"
-    />
-    <link
-      rel="stylesheet"
-      href="node_modules/reveal.js/plugin/highlight/monokai.css"
-    />
-    <link rel="stylesheet" href="css/custom.css" />
-  </head>
+        <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+        <link rel="stylesheet" href="node_modules/reveal.js/dist/reveal.css" />
+        <!-- Theme CSS (change theme here) -->
+        <link
+            rel="stylesheet"
+            href="node_modules/reveal.js/dist/theme/black.css"
+            id="theme"
+        />
+        <link
+            rel="stylesheet"
+            href="node_modules/reveal.js/plugin/highlight/monokai.css"
+        />
+        <link rel="stylesheet" href="css/custom.css" />
+    </head>
 
-  <body>
-    <div class="reveal">
-      <div class="slides">
-        <!--
+    <body>
+        <div class="reveal">
+            <div class="slides">
+                <!--
           Each section loads a Markdown file via reveal.js's built-in data-markdown.
           Use data-separator-vertical to split a single .md file into vertical slides.
         -->
-        <section
-          data-markdown="slides/01-title.md"
-          data-background-gradient="linear-gradient(to bottom, #283048, #859398)"
-        ></section>
+                <section
+                    data-markdown="slides/01-title.md"
+                    data-background-gradient="linear-gradient(to bottom, #283048, #859398)"
+                ></section>
 
-        <section data-markdown="slides/02-about.md"></section>
+                <section data-markdown="slides/02-about.md"></section>
 
-        <!-- Vertical group: overview → code → math, separated by --- in the .md file -->
-        <section
-          data-markdown="slides/03-features.md"
-          data-separator-vertical="^---$"
-        ></section>
+                <!-- Vertical group: overview → code → math, separated by --- in the .md file -->
+                <section
+                    data-markdown="slides/03-features.md"
+                    data-separator-vertical="^---$"
+                ></section>
 
-        <!-- Vertical group: getting started → themes, separated by --- in the .md file -->
-        <section
-          data-markdown="slides/04-getting-started.md"
-          data-separator-vertical="^---$"
-        ></section>
+                <!-- Vertical group: getting started → themes, separated by --- in the .md file -->
+                <section
+                    data-markdown="slides/04-getting-started.md"
+                    data-separator-vertical="^---$"
+                ></section>
 
-        <section
-          data-markdown="slides/05-conclusion.md"
-          data-background-gradient="linear-gradient(to bottom, #134E5E, #71B280)"
-        ></section>
-      </div>
-    </div>
+                <section
+                    data-markdown="slides/05-conclusion.md"
+                    data-background-gradient="linear-gradient(to bottom, #134E5E, #71B280)"
+                ></section>
+            </div>
+        </div>
 
-    <script src="node_modules/reveal.js/dist/reveal.js"></script>
-    <script src="node_modules/reveal.js/plugin/notes/notes.js"></script>
-    <script src="node_modules/reveal.js/plugin/markdown/markdown.js"></script>
-    <script src="node_modules/reveal.js/plugin/highlight/highlight.js"></script>
-    <script src="node_modules/reveal.js/plugin/math/math.js"></script>
-    <script src="node_modules/reveal.js/plugin/search/search.js"></script>
-    <script src="node_modules/reveal.js/plugin/zoom/zoom.js"></script>
-    <script src="js/custom.js"></script>
+        <script src="node_modules/reveal.js/dist/reveal.js"></script>
+        <script src="node_modules/reveal.js/plugin/notes/notes.js"></script>
+        <script src="node_modules/reveal.js/plugin/markdown/markdown.js"></script>
+        <script src="node_modules/reveal.js/plugin/highlight/highlight.js"></script>
+        <script src="node_modules/reveal.js/plugin/math/math.js"></script>
+        <script src="node_modules/reveal.js/plugin/search/search.js"></script>
+        <script src="node_modules/reveal.js/plugin/zoom/zoom.js"></script>
+        <script src="js/custom.js"></script>
 
-    <script>
-      Reveal.initialize({
-        controls: true,
-        controlsTutorial: true,
-        progress: true,
-        slideNumber: "c/t",
-        hash: true,
-        center: true,
-        touch: true,
-        transition: "slide",
-        transitionSpeed: "default",
-        backgroundTransition: "fade",
-        viewDistance: 3,
-        mobileViewDistance: 2,
-        plugins: [
-          RevealMarkdown,
-          RevealHighlight,
-          RevealNotes,
-          RevealMath.KaTeX,
-          RevealSearch,
-          RevealZoom,
-        ],
-      });
-    </script>
-  </body>
+        <script>
+            Reveal.initialize({
+                controls: true,
+                controlsTutorial: true,
+                progress: true,
+                slideNumber: 'c/t',
+                hash: true,
+                center: true,
+                touch: true,
+                transition: 'slide',
+                transitionSpeed: 'default',
+                backgroundTransition: 'fade',
+                viewDistance: 3,
+                mobileViewDistance: 2,
+                plugins: [
+                    RevealMarkdown,
+                    RevealHighlight,
+                    RevealNotes,
+                    RevealMath.KaTeX,
+                    RevealSearch,
+                    RevealZoom,
+                ],
+            })
+        </script>
+    </body>
 </html>

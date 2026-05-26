@@ -1,65 +1,62 @@
 ---
 ci:
-  autofix_commit_msg: |
-    [pre-commit.ci] auto fixes from pre-commit.com hooks
+    autofix_commit_msg: |
+        [pre-commit.ci] auto fixes from pre-commit.com hooks
 
-    for more information, see https://pre-commit.ci
-  autofix_prs: true
-  autoupdate_branch: ""
-  autoupdate_commit_msg: "[pre-commit.ci] pre-commit autoupdate"
-  autoupdate_schedule: weekly
-  skip: []
-  submodules: false
+        for more information, see https://pre-commit.ci
+    autofix_prs: true
+    autoupdate_branch: ''
+    autoupdate_commit_msg: 'chore: [pre-commit.ci] pre-commit autoupdate'
+    autoupdate_schedule: quarterly
+    skip: []
+    submodules: false
 
 repos:
-  - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v6.0.0
-    hooks:
-      - id: check-added-large-files
-      - id: check-case-conflict
-      - id: check-merge-conflict
-      - id: check-symlinks
-      - id: check-yaml
-      - id: check-json
-      - id: end-of-file-fixer
-      - id: mixed-line-ending
-      - id: trailing-whitespace
-      - id: fix-byte-order-marker
+    - repo: https://github.com/pre-commit/pre-commit-hooks
+      rev: v6.0.0
+      hooks:
+          - id: check-added-large-files
+          - id: check-case-conflict
+          - id: check-merge-conflict
+          - id: check-symlinks
+          - id: check-yaml
+          - id: check-json
+          - id: end-of-file-fixer
+          - id: mixed-line-ending
+          - id: trailing-whitespace
+          - id: fix-byte-order-marker
 
-  - repo: https://github.com/streetsidesoftware/cspell-cli
-    rev: v9.3.3 # Keep this version or update to the latest stable
-    hooks:
-      - id: cspell
-        name: Check spelling in files
-        args: ["--config", "cspell.json"]
-        files: \.(md|js|ts|html|css)$
-        additional_dependencies:
-          - "@cspell/dict-people-names"
+    - repo: https://github.com/crate-ci/typos
+      rev: v1.46.3
+      hooks:
+          - id: typos
+            args: []
+            files: \.(md|html)$
 
-  - repo: https://github.com/rbubley/mirrors-prettier
-    rev: v3.8.1
-    hooks:
-      - id: prettier
+    - repo: https://github.com/rbubley/mirrors-prettier
+      rev: v3.8.1
+      hooks:
+          - id: prettier
 
-  - repo: https://github.com/Yelp/detect-secrets
-    rev: v1.5.0 # Use the latest stable version
-    hooks:
-      - id: detect-secrets
-        name: Detect secrets within the codebase
-        description: Detect and block secrets from committing to the codebase
+    - repo: https://github.com/DavidAnson/markdownlint-cli2
+      rev: v0.22.1
+      hooks:
+          - id: markdownlint-cli2
+            args:
+                - --config
+                - .markdownlint.yaml
 
-  - repo: https://github.com/igorshubovych/markdownlint-cli
-    rev: v0.45.0
-    hooks:
-      - id: markdownlint
-        files: \.(md|markdown)$
+    - repo: https://github.com/thibaudcolas/pre-commit-stylelint
+      rev: v16.25.0
+      hooks:
+          - id: stylelint
+            args: [--fix]
+            files: \.(css|scss|sass)$
+            additional_dependencies:
+                - stylelint@16.9.0
+                - stylelint-config-standard@36.0.1
 
-  - repo: https://github.com/thibaudcolas/pre-commit-stylelint
-    rev: v16.25.0
-    hooks:
-      - id: stylelint
-        args: [--fix]
-        files: \.(css|scss|sass)$
-        additional_dependencies:
-          - stylelint@16.9.0
-          - stylelint-config-standard@36.0.1
+    - repo: https://github.com/gitleaks/gitleaks
+      rev: v8.30.1
+      hooks:
+          - id: gitleaks
