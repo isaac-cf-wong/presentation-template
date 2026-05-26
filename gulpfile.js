@@ -40,15 +40,18 @@ function copyDirectory(src, dest) {
 }
 
 // Build task - copy files to dist directory
-function build() {
+function copyFiles() {
   return new Promise((resolve, reject) => {
     try {
+      // Always start from a clean slate
+      if (fs.existsSync("dist")) {
+        fs.rmSync("dist", { recursive: true, force: true });
+      }
+      console.log("🧹 Cleaned dist directory");
       console.log("🔨 Building presentation template...");
 
       // Create dist directory
-      if (!fs.existsSync("dist")) {
-        fs.mkdirSync("dist", { recursive: true });
-      }
+      fs.mkdirSync("dist", { recursive: true });
 
       // Copy main HTML file
       if (fs.existsSync("index.html")) {
@@ -57,7 +60,7 @@ function build() {
       }
 
       // Copy directories if they exist
-      const dirsToCopy = ["css", "js", "images", "videos"];
+      const dirsToCopy = ["css", "js", "images", "videos", "slides"];
       dirsToCopy.forEach((dir) => {
         if (fs.existsSync(dir)) {
           copyDirectory(dir, `dist/${dir}`);
@@ -81,6 +84,15 @@ function build() {
             console.log(`✅ Copied reveal.js ${subdir}/`);
           }
         });
+      }
+
+      // Copy reveal_external plugin (required for loading slides from external files)
+      const revealExternalSrc = "node_modules/reveal_external";
+      const revealExternalDest = "dist/node_modules/reveal_external";
+
+      if (fs.existsSync(revealExternalSrc)) {
+        copyDirectory(revealExternalSrc, revealExternalDest);
+        console.log("✅ Copied reveal_external/");
       }
 
       console.log("🎉 Build complete! Files ready in dist/ directory");
@@ -115,12 +127,22 @@ function test() {
 
 // Development server with live reload
 function serve(done) {
-  connect.server({
+  const server = connect.server({
     root: root,
     port: port,
     host: host,
     livereload: true,
     open: true,
+  });
+
+  server.server.on("error", function (err) {
+    if (err.code === "EADDRINUSE") {
+      console.error(
+        `❌ Port ${port} is already in use. Run: lsof -ti:${port} | xargs kill -9`,
+      );
+      process.exit(1);
+    }
+    throw err;
   });
 
   console.log(`🚀 Development server started at http://${host}:${port}`);
@@ -132,7 +154,7 @@ function serve(done) {
     function (cb) {
       console.log("📝 File change detected, reloading browser...");
       return gulp.src("index.html").pipe(connect.reload());
-    }
+    },
   );
 
   console.log("👀 Watching files for changes...");
@@ -158,12 +180,12 @@ function serveProduction(done) {
           ) {
             res.setHeader(
               "Cache-Control",
-              "public, max-age=31536000, immutable"
+              "public, max-age=31536000, immutable",
             );
           } else if (url.match(/\.(html|htm)$/)) {
             res.setHeader(
               "Cache-Control",
-              "public, max-age=3600, must-revalidate"
+              "public, max-age=3600, must-revalidate",
             );
           } else {
             res.setHeader("Cache-Control", "public, max-age=86400");
@@ -183,7 +205,7 @@ function serveProduction(done) {
 
 // Task definitions
 gulp.task("clean", clean);
-gulp.task("build", gulp.series(clean, build));
+gulp.task("build", gulp.series("clean", copyFiles));
 gulp.task("test", test);
 gulp.task("serve", serve);
 gulp.task("serve:prod", serveProduction);
@@ -192,7 +214,7 @@ gulp.task("default", gulp.series("test"));
 // Export functions for programmatic use
 module.exports = {
   clean,
-  build,
+  build: copyFiles,
   test,
   serve,
   serveProduction,

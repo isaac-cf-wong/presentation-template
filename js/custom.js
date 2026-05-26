@@ -44,13 +44,13 @@ function toggleTheme() {
   if (currentTheme.includes("black")) {
     themeLink.setAttribute(
       "href",
-      "node_modules/reveal.js/dist/theme/white.css"
+      "node_modules/reveal.js/dist/theme/white.css",
     );
     console.log("🎨 Switched to white theme");
   } else {
     themeLink.setAttribute(
       "href",
-      "node_modules/reveal.js/dist/theme/black.css"
+      "node_modules/reveal.js/dist/theme/black.css",
     );
     console.log("🎨 Switched to black theme");
   }

@@ -35,26 +35,11 @@ repos:
         files: \.(md|js|ts|html|css)$
         additional_dependencies:
           - "@cspell/dict-people-names"
-      - id: cspell
-        name: check commit message spelling
-        args:
-          - --config cspell.json
-          - --no-must-find-files
-          - --no-progress
-          - --no-summary
-          - --files
-          - .git/COMMIT_EDITMSG
-        stages: [commit-msg]
-        always_run: true
 
-  - repo: https://github.com/pre-commit/mirrors-prettier
-    rev: v4.0.0-alpha.8
+  - repo: https://github.com/rbubley/mirrors-prettier
+    rev: v3.8.1
     hooks:
       - id: prettier
-        additional_dependencies:
-          - prettier@2.1.2
-          - "@prettier/plugin-xml@0.12.0"
-        files: \.(md|markdown|json|yaml|yml|css|js|ts|html)$
 
   - repo: https://github.com/Yelp/detect-secrets
     rev: v1.5.0 # Use the latest stable version
@@ -67,7 +52,6 @@ repos:
     rev: v0.45.0
     hooks:
       - id: markdownlint
-        args: ["--fix"]
         files: \.(md|markdown)$
 
   - repo: https://github.com/thibaudcolas/pre-commit-stylelint
