@@ -205,12 +205,27 @@ function serveProduction(done) {
     done()
 }
 
+// Preview server for built dist/ output
+function servePreview(done) {
+    connect.server({
+        root: 'dist',
+        port: port,
+        host: host,
+        livereload: false,
+        open: true,
+    })
+    console.log(`🚀 Preview server started at http://${host}:${port}`)
+    console.log('Serving built files from dist/')
+    done()
+}
+
 // Task definitions
 gulp.task('clean', clean)
 gulp.task('build', gulp.series('clean', copyFiles))
 gulp.task('test', test)
 gulp.task('serve', serve)
 gulp.task('serve:prod', serveProduction)
+gulp.task('preview', servePreview)
 gulp.task('default', gulp.series('test'))
 
 // Export functions for programmatic use
