@@ -1,0 +1,37 @@
+[build-system]
+requires = ["hatchling", "hatch-vcs"]
+build-backend = "hatchling.build"
+
+[project]
+name = "presentation-template"
+authors = [{ name = "Isaac C. F. Wong" }]
+description = "A GitHub template repository for a Reveal.js presentation"
+readme = "README.md"
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: BSD License",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+]
+requires-python = ">=3.12"
+dynamic = ["version"]
+
+[dependency-groups]
+dev = ["prek>=0.4.1"]
+release = ["git-cliff>=2.13.1"]
+
+[project.urls]
+Documentation = "https://isaac-cf-wong.github.io/presentation-template"
+Source = "https://github.com/isaac-cf-wong/presentation-template"
+Tracker = "https://github.com/isaac-cf-wong/presentation-template/issues"
+Home = "https://github.com/isaac-cf-wong/presentation-template"
+"Release Notes" = "https://github.com/isaac-cf-wong/presentation-template/releases"
+
+[tool.hatch.version]
+source = "vcs"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/foo"]

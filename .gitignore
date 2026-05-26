@@ -75,7 +75,6 @@ dev-notes.md
 
 # Package managers
 # Lock files excluded for templates - users should generate fresh ones
-package-lock.json
 yarn.lock
 pnpm-lock.yaml
 
