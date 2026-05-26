@@ -1,49 +1,48 @@
 # Presentation Template 🎯
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
-[![Reveal.js](https://img.shields.io/badge/reveal.js-5.x-orange.svg)](https://revealjs.com/)
+[![Reveal.js](https://img.shields.io/badge/reveal.js-6.x-orange.svg)](https://revealjs.com/)
 [![CI](https://github.com/isaac-cf-wong/presentation-template/actions/workflows/ci.yml/badge.svg)](https://github.com/isaac-cf-wong/presentation-template/actions/workflows/ci.yml)
 [![Publish](https://github.com/isaac-cf-wong/presentation-template/actions/workflows/publish.yml/badge.svg)](https://isaac-cf-wong.github.io/presentation-template/)
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit)](https://github.com/pre-commit/pre-commit)
-[![cspell](https://img.shields.io/badge/cspell-checked-brightgreen)](https://cspell.org/)
+[![typos](https://img.shields.io/badge/spell--check-typos-brightgreen)](https://github.com/crate-ci/typos)
 
 > **⚠️ Experimental Template Disclaimer**
 >
-> This presentation template is currently in **experimental stage** and is built
-> with GitHub Copilot assistance. While functional, it has not been fully tested
-> in all environments and scenarios. Use at your own discretion for production
-> presentations. Feedback and contributions are welcome to help improve
-> stability and features.
+> This presentation template is currently in **experimental stage**. While
+> functional, it has not been fully tested in all environments and scenarios.
+> Use at your own discretion for production presentations. Feedback and
+> contributions are welcome to help improve stability and features.
 
 A modern, responsive presentation template built with
-[reveal.js](https://revealjs.com/) that helps you create stunning HTML
-presentations with ease.
+[reveal.js](https://revealjs.com/) 6.x and a small Gulp pipeline. Slides are
+authored as Markdown files in `slides/` and loaded into `index.html` via
+reveal.js's built-in `data-markdown` support.
 
 ## ✨ Features
 
-- 📱 **Responsive Design** - Works perfectly on desktop, tablet, and mobile
-- 🎨 **Beautiful Themes** - Multiple built-in themes and easy customization
-- 🔄 **Smooth Transitions** - Elegant slide transitions and animations
-- 📝 **Markdown Support** - Write slides in Markdown for faster content creation
-- 🖼️ **Media Rich** - Support for images, videos, code syntax highlighting
-- 📊 **Interactive Elements** - Charts, diagrams, and interactive content
-- 🎤 **Speaker Notes** - Built-in speaker notes for presentations
-- 📤 **Export Options** - Export to PDF or host anywhere
-- 🔧 **Plugin System** - Extensible with reveal.js plugins
+- 📱 **Responsive Design** - Works on desktop, tablet, and mobile
+- 🎨 **Built-in Themes** - All reveal.js 6.x themes available out of the box
+- 🔄 **Smooth Transitions** - Slide transitions and gradient backgrounds
+- 📝 **Markdown Slides** - Each slide deck section is an external `.md` file
+- 🖼️ **Media Rich** - Images, videos, and syntax-highlighted code
+- ➗ **Math Support** - LaTeX equations rendered with KaTeX
+- 🔍 **Search & Zoom** - Built-in reveal.js search and zoom plugins
+- 🎤 **Speaker Notes** - Press `S` to open the speaker view
+- 📤 **PDF Export** - Print-friendly via `?print-pdf`
+- 🚀 **GitHub Pages Deploy** - Automated publish workflow included
 
 ## 🚀 Quick Start
 
 ### Prerequisites
 
-- Node.js (v14 or higher)
-- npm or yarn
+- Node.js 18.x or 20.x (matches the versions used in CI)
+- npm
 
 ### Create Your Presentation
 
 1. **Use this template:**
-    - Click the "Use this template" button on GitHub
-    - Create a new repository from this template
-    - Clone your new repository:
+    - Click the "Use this template" button on GitHub, or clone directly:
 
     ```console
     git clone https://github.com/YOUR-USERNAME/YOUR-PRESENTATION-NAME.git
@@ -62,8 +61,8 @@ presentations with ease.
     npm start
     ```
 
-    This will start a development server with live reload at
-    `http://localhost:8000`
+    Starts a Gulp + `gulp-connect` server with live reload at
+    `http://localhost:8000`.
 
 4. **Build for production:**
 
@@ -71,214 +70,288 @@ presentations with ease.
     npm run build
     ```
 
-    This creates an optimized version in the `dist/` folder ready for
-    deployment.
+    Copies all presentation assets and the required reveal.js files into `dist/`
+    ready for deployment.
 
-5. **Run tests:**
+5. **Preview the built output:**
+
+    ```console
+    npm run preview
+    ```
+
+    Serves the contents of `dist/` (no live reload) so you can verify the
+    production build locally.
+
+6. **Run the smoke test:**
 
     ```console
     npm test
     ```
 
+    Verifies the required template files (`index.html`, `css/custom.css`,
+    `js/custom.js`) are present.
+
 ## 📁 Project Structure
 
 ```console
 presentation-template/
-├── index.html              # Main presentation file
+├── index.html                # Main reveal.js entry point
+├── slides/                   # Markdown slide files (one per section)
+│   ├── 01-title.md
+│   ├── 02-about.md
+│   ├── 03-features.md
+│   ├── 04-getting-started.md
+│   └── 05-conclusion.md
 ├── css/
-│   ├── theme/              # Custom themes
-│   └── reveal.css          # Core reveal.js styles
+│   └── custom.css            # Project-specific style overrides
 ├── js/
-│   ├── reveal.js           # Reveal.js library
-│   └── plugins/            # Reveal.js plugins
-├── images/                 # Presentation images
-├── slides/                 # Individual slide files (optional)
-├── package.json            # Dependencies and scripts
-└── README.md              # This file
+│   └── custom.js             # Custom JS (keyboard shortcuts, helpers)
+├── images/                   # Image assets (with README placeholder)
+├── videos/                   # Video assets (with README placeholder)
+├── docs/
+│   └── reveal-config.md      # Reveal.js configuration reference
+├── gulpfile.js               # Gulp tasks (serve / build / preview / test)
+├── package.json              # npm dependencies and scripts
+├── pyproject.toml            # Python tooling (uv, prek, git-cliff)
+├── cliff.toml                # git-cliff changelog configuration
+├── .pre-commit-config.yaml   # Pre-commit hook configuration
+└── .github/
+    └──  workflows/            # CI, publish, release, CodeQL, etc.
 ```
+
+`node_modules/reveal.js/` provides the reveal.js core and plugins; the Gulp
+build copies the required subset of it into `dist/node_modules/` so the built
+site is self-contained.
+
+## 📝 Creating Slides
+
+Slides are authored as Markdown files under `slides/` and pulled in by
+`index.html` using reveal.js's `data-markdown` attribute. For example:
+
+```html
+<section data-markdown="slides/02-about.md"></section>
+
+<!-- Split a single Markdown file into vertical slides using `---` -->
+<section
+    data-markdown="slides/03-features.md"
+    data-separator-vertical="^---$"
+></section>
+```
+
+Inside a Markdown file you can use any standard reveal.js features such as
+fragments, speaker notes, fenced code blocks, and KaTeX math. See
+[`docs/reveal-config.md`](docs/reveal-config.md) and the
+[reveal.js documentation](https://revealjs.com/) for full syntax.
+
+To add a new slide:
+
+1. Create `slides/06-my-slide.md`
+2. Add a new `<section data-markdown="slides/06-my-slide.md"></section>` to
+   `index.html`
 
 ## 🎨 Customization
 
 ### Themes
 
-Available built-in themes: `black` (default), `white`, `league`, `beige`, `sky`,
-`night`, `serif`, `simple`, `solarized`
+All reveal.js 6.x themes are available from
+`node_modules/reveal.js/dist/theme/`:
 
-To change the theme, modify the CSS import in `index.html`:
+`beige`, `black` (default), `black-contrast`, `blood`, `dracula`, `league`,
+`moon`, `night`, `serif`, `simple`, `sky`, `solarized`, `white`,
+`white-contrast`.
+
+Switch themes by editing the `<link id="theme">` tag in `index.html`:
 
 ```html
-<link rel="stylesheet" href="css/theme/black.css" />
+<link
+    rel="stylesheet"
+    href="node_modules/reveal.js/dist/theme/black.css"
+    id="theme"
+/>
 ```
 
 ### Custom Styling
 
-1. Create a new CSS file in `css/theme/`
-2. Import it in your `index.html`
-3. Override reveal.js variables and styles as needed
+`css/custom.css` is loaded after the reveal.js theme and is the recommended
+place to override colors, fonts, and component styles. It already defines a
+small set of CSS variables (`--main-color`, `--accent-color`, etc.) you can
+tweak.
 
-## 📝 Creating Slides
-
-Reveal.js supports multiple ways to create slides including HTML sections,
-Markdown, and external slide files.
-
-For detailed examples and syntax, see the
-[reveal.js documentation](https://revealjs.com/).
+For a fully custom theme, copy an existing theme out of
+`node_modules/reveal.js/dist/theme/` into `css/`, edit it, and point the
+`<link id="theme">` tag at your new file.
 
 ## 🎮 Controls
 
 - **Navigation**: Arrow keys, space bar, or on-screen controls
-- **Fullscreen**: Press `F` to toggle fullscreen mode
-- **Speaker View**: Press `S` to open speaker notes view
-- **Overview**: Press `ESC` to see slide overview
-- **Pause**: Press `B` or `.` to pause/blackout
+- **Fullscreen**: Press `F`
+- **Speaker View**: Press `S`
+- **Overview**: Press `ESC`
+- **Pause / Blackout**: Press `B` or `.`
+- **Search**: Press `Ctrl/Cmd + Shift + F`
 - **Help**: Press `?` to see all keyboard shortcuts
+
+The template also adds `T` as a custom shortcut to toggle between the `black`
+and `white` themes (see `js/custom.js`).
 
 ## 📤 Export & Deployment
 
 ### Export to PDF
 
-1. Add `?print-pdf` to your presentation URL
-2. Open the print dialog (`Ctrl+P`/`Cmd+P`)
-3. Select "Save as PDF"
+1. Append `?print-pdf` to the presentation URL
+2. Open the print dialog (`Ctrl+P` / `Cmd+P`)
+3. Choose "Save as PDF" with **Landscape** layout
 
 ### Deploy to GitHub Pages
 
-1. Push your presentation to a GitHub repository
-2. Go to repository Settings > Pages
-3. Select source branch (usually `main` or `master`)
-4. Your presentation will be available at
-   `https://username.github.io/repository-name`
+This repository ships with a `Publish to GitHub Pages` workflow
+([`.github/workflows/publish.yml`](.github/workflows/publish.yml)) that runs on
+every push to `main`:
 
-### Deploy to Netlify
+1. Installs dependencies with `npm ci`
+2. Runs `npm test` and `npm run build`
+3. Uploads `dist/` as a Pages artifact and deploys it
 
-1. Connect your GitHub repository to Netlify
-2. Set build command to `npm run build` (if using build process)
-3. Set publish directory to root or build output
-4. Deploy automatically on every push
+To enable it on your fork, go to **Settings → Pages** and set the source to
+**GitHub Actions**. The presentation will be available at
+`https://<your-username>.github.io/<your-repo>/`.
 
-## 🧪 Testing
+### Deploy to Netlify / Vercel / etc.
 
-This template includes comprehensive testing infrastructure to ensure quality
-and performance:
+Any static host works. Run `npm run build` and publish the `dist/` directory (or
+configure the host to run `npm run build` and serve `dist/`).
 
-### Available Tests
+## 🧪 Tests & Quality Checks
 
-- **Unit Tests**: JavaScript functionality validation with Jest
-- **Integration Tests**: Presentation structure and accessibility testing
-- **Performance Tests**: Lighthouse CI for performance, accessibility, and SEO
-  validation
-- **Pre-commit Hooks**: Code quality enforcement (spelling, formatting, linting)
+The current testing surface is intentionally lightweight:
 
-### Running Tests
+- **`npm test`** runs `gulp test`, which verifies that the required template
+  files (`index.html`, `css/custom.css`, `js/custom.js`) are present. CI runs
+  this on Node.js 18.x and 20.x against every push and pull request to `main`.
+- **`npm run build`** is also exercised in CI to make sure the production copy
+  step succeeds.
 
-```bash
-# Run all tests
-npm test
+Pre-commit hooks (configured in
+[`.pre-commit-config.yaml`](.pre-commit-config.yaml)) enforce code quality
+locally and on [pre-commit.ci](https://pre-commit.ci):
 
-# Run tests in watch mode (for development)
-npm run test:watch
+- `pre-commit-hooks` — whitespace, line endings, YAML/JSON validity, large
+  files, merge conflicts
+- [`typos`](https://github.com/crate-ci/typos) — spell-check for Markdown and
+  HTML
+- [`prettier`](https://prettier.io/) — formatting for JS, CSS, HTML, Markdown,
+  YAML
+- [`markdownlint-cli2`](https://github.com/DavidAnson/markdownlint-cli2) —
+  Markdown linting (see `.markdownlint.yaml`)
+- [`stylelint`](https://stylelint.io/) — CSS linting (see `.stylelintrc.json`)
+- [`uv-lock`](https://github.com/astral-sh/uv-pre-commit) — keeps the Python
+  tooling lockfile in sync
+- [`gitleaks`](https://github.com/gitleaks/gitleaks) — secret scanning
 
-# Generate test coverage report
-npm run test:coverage
+Lighthouse CI is available via the `@lhci/cli` devDependency for ad-hoc audits
+(e.g. `npx lhci autorun`), but is not wired into an npm script or CI step in
+this template — feel free to add one if you need it.
 
-# Run Lighthouse performance audit
-npm run lighthouse
+## ⚙️ Build System
 
-# Run pre-commit hooks manually
-npm run precommit
-```
+Build tasks live in [`gulpfile.js`](gulpfile.js) and are exposed through npm
+scripts:
 
-### Continuous Integration
+| Command           | Gulp task | Description                                         |
+| ----------------- | --------- | --------------------------------------------------- |
+| `npm start`       | `serve`   | Dev server at `http://localhost:8000` (live reload) |
+| `npm run build`   | `build`   | Cleans `dist/`, then copies the presentation        |
+| `npm run preview` | `preview` | Serves the built `dist/` output                     |
+| `npm test`        | `test`    | Verifies required template files exist              |
 
-The repository includes GitHub Actions workflows that automatically:
+Additional Gulp tasks not exposed via npm: `gulp clean` (just removes `dist/`)
+and `gulp serve:prod` (no-live-reload server with cache headers, suitable for
+Lighthouse runs).
 
-- ✅ **Test** presentation structure and functionality
-- ✅ **Validate** HTML, CSS, and JavaScript quality
-- ✅ **Check** accessibility compliance (WCAG 2.1)
-- ✅ **Audit** performance metrics with Lighthouse
-- ✅ **Verify** cross-browser compatibility
+The `build` task:
 
-### Test Configuration
+- 🧹 Removes any existing `dist/` directory
+- 📁 Copies `index.html`, `css/`, `js/`, `images/`, `videos/`, and `slides/`
+- 📦 Copies the required subset of `node_modules/reveal.js/` (the `dist/` and
+  `plugin/` folders) and `node_modules/reveal_external/`
+- ✅ Produces a self-contained directory ready to serve from any static host
 
-- **Jest Config**: `jest.config.js` - Unit testing configuration
-- **Lighthouse Config**: `lighthouserc.js` - Performance testing thresholds
-- **Pre-commit Config**: `.pre-commit-config.yaml` - Code quality hooks
+### Tooling
 
-### Quality Standards
-
-The testing suite enforces:
-
-- **Performance**: 80%+ Lighthouse score
-- **Accessibility**: 90%+ compliance (strict WCAG standards)
-- **Best Practices**: 80%+ score for modern web standards
-- **SEO**: 80%+ search engine optimization
-- **Code Coverage**: 70%+ test coverage threshold
-
-## ⚡ Build System
-
-This template uses **Gulp** as the build system while maintaining familiar npm
-script interfaces:
-
-### Available Commands
-
-```bash
-# Development
-npm start          # Start development server with live reload
-npm run dev        # Same as npm start
-
-# Production
-npm run build      # Build optimized files to dist/
-npm run serve:dist # Serve the built version
-
-# Testing & Quality
-npm test           # Run all tests
-npm run test:watch # Run tests in watch mode
-npm run lint       # Run linting checks
-```
-
-### Build Process
-
-The build system:
-
-- 🧹 **Cleans** the `dist/` directory
-- 📁 **Copies** all presentation files (HTML, CSS, JS, images)
-- 📦 **Bundles** reveal.js dependencies
-- ✅ **Optimizes** for production deployment
-
-### Under the Hood
-
-- **Gulp 5.x** - Modern build system with ES6+ support
-- **gulp-connect** - Development server with live reload
-- **Jest** - JavaScript testing framework
-- **Lighthouse CI** - Performance and accessibility auditing
+- **reveal.js 6.x** with the `markdown`, `highlight`, `notes`, `math` (KaTeX),
+  `search`, and `zoom` plugins
+- **`reveal_external`** for loading external slide files
+- **Gulp 5.x** + `gulp-connect` for dev server and build
+- **`yargs`** for `--root`, `--port`, `--host` CLI overrides on Gulp tasks
+- **`http-server`** as a lightweight fallback static server (devDependency)
+- **`@lhci/cli`** available for Lighthouse audits
 
 ## 🔧 Configuration
 
-Reveal.js can be configured by modifying the initialization options in
-`index.html`. Key options include:
+Reveal.js is initialized at the bottom of `index.html` with the following
+defaults:
 
 ```javascript
 Reveal.initialize({
-    controls: true, // Display controls
-    progress: true, // Show progress bar
-    center: true, // Vertical centering
-    transition: 'slide', // Transition style (none/fade/slide/convex/concave/zoom)
-    transitionSpeed: 'default', // Transition speed (default/fast/slow)
-    hash: true, // Add slide number to URL
-    // ... other options
+    controls: true,
+    controlsTutorial: true,
+    progress: true,
+    slideNumber: 'c/t',
+    hash: true,
+    center: true,
+    touch: true,
+    transition: 'slide',
+    transitionSpeed: 'default',
+    backgroundTransition: 'fade',
+    viewDistance: 3,
+    mobileViewDistance: 2,
+    plugins: [
+        RevealMarkdown,
+        RevealHighlight,
+        RevealNotes,
+        RevealMath.KaTeX,
+        RevealSearch,
+        RevealZoom,
+    ],
 })
 ```
 
-For complete configuration options, see the
-[reveal.js documentation](https://revealjs.com/config/).
+See [`docs/reveal-config.md`](docs/reveal-config.md) for a wider tour of useful
+options, or the
+[full reveal.js configuration reference](https://revealjs.com/config/).
+
+## 🤖 GitHub Workflows
+
+This template ships with a number of GitHub Actions workflows under
+[`.github/workflows/`](.github/workflows/):
+
+- **`ci.yml`** — Test + build matrix on Node.js 18.x / 20.x
+- **`publish.yml`** — Build and deploy `dist/` to GitHub Pages on push to `main`
+- **`release.yml`** — Creates a GitHub Release with a
+  [git-cliff](https://git-cliff.org/)-generated changelog
+- **`draft-release.yml`** / **`scheduled-release.yml`** — Maintain a rolling
+  draft release
+- **`semantic-pr-title.yml`** — Enforces Conventional Commit-style PR titles
+- **`codeql.yml`** — Static analysis with GitHub CodeQL
+
+Dependency updates are handled by Dependabot
+([`.github/dependabot.yml`](.github/dependabot.yml)) for both npm and GitHub
+Actions.
 
 ## 🤝 Contributing
 
 1. Fork the repository
 2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+3. Commit your changes using a
+   [Conventional Commit](https://www.conventionalcommits.org/) message
+   (`git commit -m 'feat: add some amazing feature'`)
 4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
+5. Open a Pull Request — the `semantic-pr-title` workflow will validate the
+   title format
+
+If you have [pre-commit](https://pre-commit.com/) installed, run
+`pre-commit install` once and the hooks above will run automatically on every
+commit.
 
 ## 📄 License
 
@@ -287,7 +360,8 @@ for details.
 
 ## 🙏 Acknowledgments
 
-- [reveal.js](https://revealjs.com/) - The amazing presentation framework
+- [reveal.js](https://revealjs.com/) - The presentation framework powering this
+  template
 - [Hakim El Hattab](https://github.com/hakimel) - Creator of reveal.js
 - All the contributors who have helped improve this template
 
