@@ -41,44 +41,44 @@ presentations with ease.
 ### Create Your Presentation
 
 1. **Use this template:**
-   - Click the "Use this template" button on GitHub
-   - Create a new repository from this template
-   - Clone your new repository:
+    - Click the "Use this template" button on GitHub
+    - Create a new repository from this template
+    - Clone your new repository:
 
-   ```console
-   git clone https://github.com/YOUR-USERNAME/YOUR-PRESENTATION-NAME.git
-   cd YOUR-PRESENTATION-NAME
-   ```
+    ```console
+    git clone https://github.com/YOUR-USERNAME/YOUR-PRESENTATION-NAME.git
+    cd YOUR-PRESENTATION-NAME
+    ```
 
 2. **Install dependencies:**
 
-   ```console
-   npm install
-   ```
+    ```console
+    npm install
+    ```
 
 3. **Start the development server:**
 
-   ```console
-   npm start
-   ```
+    ```console
+    npm start
+    ```
 
-   This will start a development server with live reload at
-   `http://localhost:8000`
+    This will start a development server with live reload at
+    `http://localhost:8000`
 
 4. **Build for production:**
 
-   ```console
-   npm run build
-   ```
+    ```console
+    npm run build
+    ```
 
-   This creates an optimized version in the `dist/` folder ready for
-   deployment.
+    This creates an optimized version in the `dist/` folder ready for
+    deployment.
 
 5. **Run tests:**
 
-   ```console
-   npm test
-   ```
+    ```console
+    npm test
+    ```
 
 ## 📁 Project Structure
 
@@ -259,14 +259,14 @@ Reveal.js can be configured by modifying the initialization options in
 
 ```javascript
 Reveal.initialize({
-  controls: true, // Display controls
-  progress: true, // Show progress bar
-  center: true, // Vertical centering
-  transition: "slide", // Transition style (none/fade/slide/convex/concave/zoom)
-  transitionSpeed: "default", // Transition speed (default/fast/slow)
-  hash: true, // Add slide number to URL
-  // ... other options
-});
+    controls: true, // Display controls
+    progress: true, // Show progress bar
+    center: true, // Vertical centering
+    transition: 'slide', // Transition style (none/fade/slide/convex/concave/zoom)
+    transitionSpeed: 'default', // Transition speed (default/fast/slow)
+    hash: true, // Add slide number to URL
+    // ... other options
+})
 ```
 
 For complete configuration options, see the

@@ -7,42 +7,42 @@ customization.
 
 ```javascript
 Reveal.initialize({
-  // Display controls in the bottom right corner
-  controls: true,
+    // Display controls in the bottom right corner
+    controls: true,
 
-  // Display a presentation progress bar
-  progress: true,
+    // Display a presentation progress bar
+    progress: true,
 
-  // Display the page number of the current slide
-  slideNumber: "c/t", // current/total
+    // Display the page number of the current slide
+    slideNumber: 'c/t', // current/total
 
-  // Add the current slide number to the URL hash
-  hash: true,
+    // Add the current slide number to the URL hash
+    hash: true,
 
-  // Enable keyboard shortcuts for navigation
-  keyboard: true,
+    // Enable keyboard shortcuts for navigation
+    keyboard: true,
 
-  // Enable the slide overview mode
-  overview: true,
+    // Enable the slide overview mode
+    overview: true,
 
-  // Vertical centering of slides
-  center: true,
+    // Vertical centering of slides
+    center: true,
 
-  // Enables touch navigation on devices with touch input
-  touch: true,
+    // Enables touch navigation on devices with touch input
+    touch: true,
 
-  // Turns fragments on and off globally
-  fragments: true,
+    // Turns fragments on and off globally
+    fragments: true,
 
-  // Transition style
-  transition: "slide", // none/fade/slide/convex/concave/zoom
+    // Transition style
+    transition: 'slide', // none/fade/slide/convex/concave/zoom
 
-  // Transition speed
-  transitionSpeed: "default", // default/fast/slow
+    // Transition speed
+    transitionSpeed: 'default', // default/fast/slow
 
-  // Number of slides away from the current that are visible
-  viewDistance: 3,
-});
+    // Number of slides away from the current that are visible
+    viewDistance: 3,
+})
 ```
 
 ## Advanced Options
@@ -79,13 +79,13 @@ math: {
 
 ```javascript
 plugins: [
-  RevealMarkdown, // Markdown support
-  RevealHighlight, // Code syntax highlighting
-  RevealNotes, // Speaker notes
-  RevealMath.KaTeX, // Math equations
-  RevealSearch, // Search functionality
-  RevealZoom, // Zoom functionality
-];
+    RevealMarkdown, // Markdown support
+    RevealHighlight, // Code syntax highlighting
+    RevealNotes, // Speaker notes
+    RevealMath.KaTeX, // Math equations
+    RevealSearch, // Search functionality
+    RevealZoom, // Zoom functionality
+]
 ```
 
 ## Custom Themes
@@ -115,12 +115,12 @@ Add speaker notes to any slide:
 
 ```html
 <section>
-  <h2>Slide Title</h2>
-  <p>Slide content</p>
-  <aside class="notes">
-    These are speaker notes. They're only visible in speaker view. Press 'S' to
-    open speaker view.
-  </aside>
+    <h2>Slide Title</h2>
+    <p>Slide content</p>
+    <aside class="notes">
+        These are speaker notes. They're only visible in speaker view. Press 'S'
+        to open speaker view.
+    </aside>
 </section>
 ```
 
