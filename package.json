@@ -39,10 +39,5 @@
     "bugs": {
         "url": "https://github.com/isaac-cf-wong/presentation-template/issues"
     },
-    "homepage": "https://github.com/isaac-cf-wong/presentation-template#readme",
-    "overrides": {
-        "rimraf": "^5.0.0",
-        "glob": "^10.0.0",
-        "inflight": "npm:@isaacs/inflight@^1.0.0"
-    }
+    "homepage": "https://github.com/isaac-cf-wong/presentation-template#readme"
 }
