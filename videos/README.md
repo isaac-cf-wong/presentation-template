@@ -20,23 +20,23 @@ This directory contains video files for your presentation.
 ```html
 <!-- Basic video -->
 <video controls>
-  <source src="videos/sample-video.mp4" type="video/mp4" />
-  <source src="videos/sample-video.webm" type="video/webm" />
-  Your browser does not support the video tag.
+    <source src="videos/sample-video.mp4" type="video/mp4" />
+    <source src="videos/sample-video.webm" type="video/webm" />
+    Your browser does not support the video tag.
 </video>
 
 <!-- Auto-play video (muted for browser policies) -->
 <video autoplay muted loop>
-  <source src="videos/background-video.mp4" type="video/mp4" />
+    <source src="videos/background-video.mp4" type="video/mp4" />
 </video>
 
 <!-- Video as slide background -->
 <section
-  data-background-video="videos/background-video.mp4"
-  data-background-video-loop
-  data-background-video-muted
+    data-background-video="videos/background-video.mp4"
+    data-background-video-loop
+    data-background-video-muted
 >
-  <h2>Content over video</h2>
+    <h2>Content over video</h2>
 </section>
 ```
 
@@ -59,21 +59,21 @@ For a complete template demonstration:
 ```html
 <!-- YouTube embed -->
 <iframe
-  width="560"
-  height="315"
-  src="https://www.youtube.com/embed/VIDEO_ID"
-  frameborder="0"
-  allowfullscreen
+    width="560"
+    height="315"
+    src="https://www.youtube.com/embed/VIDEO_ID"
+    frameborder="0"
+    allowfullscreen
 >
 </iframe>
 
 <!-- Vimeo embed -->
 <iframe
-  src="https://player.vimeo.com/video/VIDEO_ID"
-  width="560"
-  height="315"
-  frameborder="0"
-  allowfullscreen
+    src="https://player.vimeo.com/video/VIDEO_ID"
+    width="560"
+    height="315"
+    frameborder="0"
+    allowfullscreen
 >
 </iframe>
 ```

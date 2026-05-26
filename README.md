@@ -9,11 +9,15 @@
 
 > **⚠️ Experimental Template Disclaimer**
 >
-> This presentation template is currently in **experimental stage** and is built with GitHub Copilot assistance.
-> While functional, it has not been fully tested in all environments and scenarios. Use at your own discretion for production presentations.
-> Feedback and contributions are welcome to help improve stability and features.
+> This presentation template is currently in **experimental stage** and is built
+> with GitHub Copilot assistance. While functional, it has not been fully tested
+> in all environments and scenarios. Use at your own discretion for production
+> presentations. Feedback and contributions are welcome to help improve
+> stability and features.
 
-A modern, responsive presentation template built with [reveal.js](https://revealjs.com/) that helps you create stunning HTML presentations with ease.
+A modern, responsive presentation template built with
+[reveal.js](https://revealjs.com/) that helps you create stunning HTML
+presentations with ease.
 
 ## ✨ Features
 
@@ -37,42 +41,44 @@ A modern, responsive presentation template built with [reveal.js](https://reveal
 ### Create Your Presentation
 
 1. **Use this template:**
-   - Click the "Use this template" button on GitHub
-   - Create a new repository from this template
-   - Clone your new repository:
+    - Click the "Use this template" button on GitHub
+    - Create a new repository from this template
+    - Clone your new repository:
 
-   ```console
-   git clone https://github.com/YOUR-USERNAME/YOUR-PRESENTATION-NAME.git
-   cd YOUR-PRESENTATION-NAME
-   ```
+    ```console
+    git clone https://github.com/YOUR-USERNAME/YOUR-PRESENTATION-NAME.git
+    cd YOUR-PRESENTATION-NAME
+    ```
 
 2. **Install dependencies:**
 
-   ```console
-   npm install
-   ```
+    ```console
+    npm install
+    ```
 
 3. **Start the development server:**
 
-   ```console
-   npm start
-   ```
+    ```console
+    npm start
+    ```
 
-   This will start a development server with live reload at `http://localhost:8000`
+    This will start a development server with live reload at
+    `http://localhost:8000`
 
 4. **Build for production:**
 
-   ```console
-   npm run build
-   ```
+    ```console
+    npm run build
+    ```
 
-   This creates an optimized version in the `dist/` folder ready for deployment.
+    This creates an optimized version in the `dist/` folder ready for
+    deployment.
 
 5. **Run tests:**
 
-   ```console
-   npm test
-   ```
+    ```console
+    npm test
+    ```
 
 ## 📁 Project Structure
 
@@ -95,7 +101,8 @@ presentation-template/
 
 ### Themes
 
-Available built-in themes: `black` (default), `white`, `league`, `beige`, `sky`, `night`, `serif`, `simple`, `solarized`
+Available built-in themes: `black` (default), `white`, `league`, `beige`, `sky`,
+`night`, `serif`, `simple`, `solarized`
 
 To change the theme, modify the CSS import in `index.html`:
 
@@ -111,9 +118,11 @@ To change the theme, modify the CSS import in `index.html`:
 
 ## 📝 Creating Slides
 
-Reveal.js supports multiple ways to create slides including HTML sections, Markdown, and external slide files.
+Reveal.js supports multiple ways to create slides including HTML sections,
+Markdown, and external slide files.
 
-For detailed examples and syntax, see the [reveal.js documentation](https://revealjs.com/).
+For detailed examples and syntax, see the
+[reveal.js documentation](https://revealjs.com/).
 
 ## 🎮 Controls
 
@@ -137,7 +146,8 @@ For detailed examples and syntax, see the [reveal.js documentation](https://reve
 1. Push your presentation to a GitHub repository
 2. Go to repository Settings > Pages
 3. Select source branch (usually `main` or `master`)
-4. Your presentation will be available at `https://username.github.io/repository-name`
+4. Your presentation will be available at
+   `https://username.github.io/repository-name`
 
 ### Deploy to Netlify
 
@@ -148,13 +158,15 @@ For detailed examples and syntax, see the [reveal.js documentation](https://reve
 
 ## 🧪 Testing
 
-This template includes comprehensive testing infrastructure to ensure quality and performance:
+This template includes comprehensive testing infrastructure to ensure quality
+and performance:
 
 ### Available Tests
 
 - **Unit Tests**: JavaScript functionality validation with Jest
 - **Integration Tests**: Presentation structure and accessibility testing
-- **Performance Tests**: Lighthouse CI for performance, accessibility, and SEO validation
+- **Performance Tests**: Lighthouse CI for performance, accessibility, and SEO
+  validation
 - **Pre-commit Hooks**: Code quality enforcement (spelling, formatting, linting)
 
 ### Running Tests
@@ -204,7 +216,8 @@ The testing suite enforces:
 
 ## ⚡ Build System
 
-This template uses **Gulp** as the build system while maintaining familiar npm script interfaces:
+This template uses **Gulp** as the build system while maintaining familiar npm
+script interfaces:
 
 ### Available Commands
 
@@ -241,21 +254,23 @@ The build system:
 
 ## 🔧 Configuration
 
-Reveal.js can be configured by modifying the initialization options in `index.html`. Key options include:
+Reveal.js can be configured by modifying the initialization options in
+`index.html`. Key options include:
 
 ```javascript
 Reveal.initialize({
-  controls: true, // Display controls
-  progress: true, // Show progress bar
-  center: true, // Vertical centering
-  transition: "slide", // Transition style (none/fade/slide/convex/concave/zoom)
-  transitionSpeed: "default", // Transition speed (default/fast/slow)
-  hash: true, // Add slide number to URL
-  // ... other options
-});
+    controls: true, // Display controls
+    progress: true, // Show progress bar
+    center: true, // Vertical centering
+    transition: 'slide', // Transition style (none/fade/slide/convex/concave/zoom)
+    transitionSpeed: 'default', // Transition speed (default/fast/slow)
+    hash: true, // Add slide number to URL
+    // ... other options
+})
 ```
 
-For complete configuration options, see the [reveal.js documentation](https://revealjs.com/config/).
+For complete configuration options, see the
+[reveal.js documentation](https://revealjs.com/config/).
 
 ## 🤝 Contributing
 
@@ -267,7 +282,8 @@ For complete configuration options, see the [reveal.js documentation](https://re
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
+for details.
 
 ## 🙏 Acknowledgments
 
@@ -280,8 +296,10 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 If you have any questions or need help:
 
 - 📖 Check the [reveal.js documentation](https://revealjs.com/)
-- 🐛 [Report issues](https://github.com/isaac-cf-wong/presentation-template/issues)
-- 💬 [Start a discussion](https://github.com/isaac-cf-wong/presentation-template/discussions)
+- 🐛
+  [Report issues](https://github.com/isaac-cf-wong/presentation-template/issues)
+- 💬
+  [Start a discussion](https://github.com/isaac-cf-wong/presentation-template/discussions)
 
 ---
 
