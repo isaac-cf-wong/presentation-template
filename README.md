@@ -37,7 +37,6 @@ A modern, responsive presentation template built with [reveal.js](https://reveal
 ### Create Your Presentation
 
 1. **Use this template:**
-
    - Click the "Use this template" button on GitHub
    - Create a new repository from this template
    - Clone your new repository:
