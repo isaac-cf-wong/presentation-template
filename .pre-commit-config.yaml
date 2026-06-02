@@ -47,7 +47,7 @@ repos:
                 - .markdownlint.yaml
 
     - repo: https://github.com/thibaudcolas/pre-commit-stylelint
-      rev: v16.25.0
+      rev: v16.26.1
       hooks:
           - id: stylelint
             args: [--fix]
