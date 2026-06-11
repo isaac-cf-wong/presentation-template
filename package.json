@@ -19,7 +19,7 @@
     "author": "Isaac C. F. Wong",
     "license": "MIT",
     "engines": {
-        "node": ">=14.14.0"
+        "node": ">=14.21.3"
     },
     "dependencies": {
         "reveal.js": "^6.0.1",
