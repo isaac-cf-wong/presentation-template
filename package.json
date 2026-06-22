@@ -30,7 +30,7 @@
         "@lhci/cli": "0.15.1",
         "gulp": "5.0.1",
         "gulp-connect": "5.7.0",
-        "yargs": "17.7.2"
+        "yargs": "17.7.3"
     },
     "repository": {
         "type": "git",
