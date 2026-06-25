@@ -156,16 +156,19 @@ To add a new slide:
 All reveal.js 6.x themes are available from
 `node_modules/reveal.js/dist/theme/`:
 
-`beige`, `black` (default), `black-contrast`, `blood`, `dracula`, `league`,
-`moon`, `night`, `serif`, `simple`, `sky`, `solarized`, `white`,
+`beige`, `black`, `black-contrast`, `blood`, `dracula`, `league`, `moon`,
+`night`, `serif`, `simple`, `sky`, `solarized`, `white` (default),
 `white-contrast`.
+
+The template ships with the `white` theme plus a custom light "paper" palette
+(blue / cyan / gold accents) defined in `css/custom.css`.
 
 Switch themes by editing the `<link id="theme">` tag in `index.html`:
 
 ```html
 <link
     rel="stylesheet"
-    href="node_modules/reveal.js/dist/theme/black.css"
+    href="node_modules/reveal.js/dist/theme/white.css"
     id="theme"
 />
 ```
@@ -174,8 +177,8 @@ Switch themes by editing the `<link id="theme">` tag in `index.html`:
 
 `css/custom.css` is loaded after the reveal.js theme and is the recommended
 place to override colors, fonts, and component styles. It already defines a
-small set of CSS variables (`--main-color`, `--accent-color`, etc.) you can
-tweak.
+small set of CSS variables (`--blue`, `--cyan`, `--gold`, `--ink`, `--paper`,
+etc.) you can tweak.
 
 For a fully custom theme, copy an existing theme out of
 `node_modules/reveal.js/dist/theme/` into `css/`, edit it, and point the

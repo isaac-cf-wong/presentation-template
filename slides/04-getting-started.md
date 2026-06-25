@@ -12,14 +12,14 @@
 
 Change the theme by editing the CSS link in `index.html`:
 
-| Theme     | Style                     |
-| --------- | ------------------------- |
-| black     | Dark background (default) |
-| white     | Light background          |
-| league    | Gray background           |
-| beige     | Warm tones                |
-| sky       | Blue tones                |
-| night     | Dark blue                 |
-| serif     | Classic serif fonts       |
-| simple    | Minimal styling           |
-| solarized | Solarized palette         |
+| Theme     | Style                      |
+| --------- | -------------------------- |
+| white     | Light background (default) |
+| black     | Dark background            |
+| league    | Gray background            |
+| beige     | Warm tones                 |
+| sky       | Blue tones                 |
+| night     | Dark blue                  |
+| serif     | Classic serif fonts        |
+| simple    | Minimal styling            |
+| solarized | Solarized palette          |

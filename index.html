@@ -16,7 +16,7 @@
         <!-- Theme CSS (change theme here) -->
         <link
             rel="stylesheet"
-            href="node_modules/reveal.js/dist/theme/black.css"
+            href="node_modules/reveal.js/dist/theme/white.css"
             id="theme"
         />
         <link
@@ -27,16 +27,18 @@
     </head>
 
     <body>
+        <!-- Optional footer shown on every slide. Edit or remove as needed. -->
+        <div class="deck-footer">
+            Your Name | Presentation Title | Venue · Date
+        </div>
+
         <div class="reveal">
             <div class="slides">
                 <!--
           Each section loads a Markdown file via reveal.js's built-in data-markdown.
           Use data-separator-vertical to split a single .md file into vertical slides.
         -->
-                <section
-                    data-markdown="slides/01-title.md"
-                    data-background-gradient="linear-gradient(to bottom, #283048, #859398)"
-                ></section>
+                <section data-markdown="slides/01-title.md"></section>
 
                 <section data-markdown="slides/02-about.md"></section>
 
@@ -52,10 +54,7 @@
                     data-separator-vertical="^---$"
                 ></section>
 
-                <section
-                    data-markdown="slides/05-conclusion.md"
-                    data-background-gradient="linear-gradient(to bottom, #134E5E, #71B280)"
-                ></section>
+                <section data-markdown="slides/05-conclusion.md"></section>
             </div>
         </div>
 
@@ -77,7 +76,10 @@
                 hash: true,
                 center: true,
                 touch: true,
-                transition: 'slide',
+                width: 1280,
+                height: 720,
+                margin: 0.075,
+                transition: 'fade',
                 transitionSpeed: 'default',
                 backgroundTransition: 'fade',
                 viewDistance: 3,
