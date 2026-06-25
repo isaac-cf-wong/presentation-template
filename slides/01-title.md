@@ -1,8 +1,11 @@
+<p class="eyebrow">Venue · Session · Date</p>
+
 # Presentation Template
 
-### Built with reveal.js
+## A clean, light theme built with reveal.js
 
-Created by **Your Name**
+<p class="byline">Your Name</p>
+<p class="muted">Affiliation · Date</p>
 
 Notes: Welcome to your presentation template. This is the title slide. You can
 add speaker notes here that won't be visible to the audience.
