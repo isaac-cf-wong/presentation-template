@@ -57,7 +57,7 @@ repos:
                 - stylelint-config-standard@36.0.1
 
     - repo: https://github.com/astral-sh/uv-pre-commit
-      rev: 0.11.25
+      rev: 0.11.26
       hooks:
           # Update the uv lockfile
           - id: uv-lock
