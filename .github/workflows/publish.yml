@@ -18,6 +18,9 @@ concurrency:
 jobs:
     build:
         runs-on: ubuntu-latest
+        # Set the repository variable DEPLOY_PAGES to "true" once GitHub
+        # Pages is enabled (Settings -> Pages -> Source: GitHub Actions).
+        if: vars.DEPLOY_PAGES == 'true'
 
         steps:
             - name: Checkout repository
