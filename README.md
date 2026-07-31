@@ -215,8 +215,15 @@ every push to `main`:
 2. Runs `npm test` and `npm run build`
 3. Uploads `dist/` as a Pages artifact and deploys it
 
-To enable it on your fork, go to **Settings → Pages** and set the source to
-**GitHub Actions**. The presentation will be available at
+To enable it on your fork:
+
+1. Go to **Settings → Pages** and set the source to **GitHub Actions**.
+2. Go to **Settings → Secrets and variables → Actions → Variables** and add a
+   repository variable named `DEPLOY_PAGES` with the value `true`.
+
+The workflow only runs once `DEPLOY_PAGES` is set to `true`, so pushes to `main`
+won't fail on forks/clones where Pages hasn't been configured yet. The
+presentation will be available at
 `https://<your-username>.github.io/<your-repo>/`.
 
 ### Deploy to Netlify / Vercel / etc.
