@@ -17,7 +17,7 @@
         "html"
     ],
     "author": "Isaac C. F. Wong",
-    "license": "MIT",
+    "license": "BSD-3-Clause",
     "engines": {
         "node": ">=14.21.3"
     },
