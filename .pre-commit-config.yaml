@@ -27,7 +27,7 @@ repos:
           - id: fix-byte-order-marker
 
     - repo: https://github.com/crate-ci/typos
-      rev: v1.49.0
+      rev: v1.49.1
       hooks:
           - id: typos
             args: []
