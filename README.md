@@ -350,6 +350,9 @@ Actions.
 
 ## 🤝 Contributing
 
+Contributions are welcome! See [CONTRIBUTING.md](CONTRIBUTING.md) for the full
+guide. The short version:
+
 1. Fork the repository
 2. Create your feature branch (`git checkout -b feature/amazing-feature`)
 3. Commit your changes using a
@@ -362,6 +365,9 @@ Actions.
 If you have [pre-commit](https://pre-commit.com/) installed, run
 `pre-commit install` once and the hooks above will run automatically on every
 commit.
+
+By participating in this project you agree to abide by our
+[Code of Conduct](CODE_OF_CONDUCT.md).
 
 ## 📄 License
 
