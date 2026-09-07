@@ -258,9 +258,10 @@ locally and on [pre-commit.ci](https://pre-commit.ci):
   tooling lockfile in sync
 - [`gitleaks`](https://github.com/gitleaks/gitleaks) — secret scanning
 
-Lighthouse CI is available via the `@lhci/cli` devDependency for ad-hoc audits
-(e.g. `npx lhci autorun`), but is not wired into an npm script or CI step in
-this template — feel free to add one if you need it.
+Lighthouse CI is not a dependency of this template. For ad-hoc audits, run it on
+demand with `npx @lhci/cli autorun` against `gulp serve:prod` — it is kept out
+of `devDependencies` because its puppeteer/lighthouse subtree pulls in packages
+with unpatched advisories.
 
 ## ⚙️ Build System
 
@@ -294,7 +295,6 @@ The `build` task:
 - **Gulp 5.x** + `gulp-connect` for dev server and build
 - **`yargs`** for `--root`, `--port`, `--host` CLI overrides on Gulp tasks
 - **`http-server`** as a lightweight fallback static server (devDependency)
-- **`@lhci/cli`** available for Lighthouse audits
 
 ## 🔧 Configuration
 

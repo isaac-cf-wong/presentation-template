@@ -27,7 +27,6 @@
     },
     "devDependencies": {
         "http-server": "14.1.1",
-        "@lhci/cli": "0.15.1",
         "gulp": "5.0.1",
         "gulp-connect": "5.7.0",
         "yargs": "17.7.3"
@@ -39,5 +38,9 @@
     "bugs": {
         "url": "https://github.com/isaac-cf-wong/presentation-template/issues"
     },
-    "homepage": "https://github.com/isaac-cf-wong/presentation-template#readme"
+    "homepage": "https://github.com/isaac-cf-wong/presentation-template#readme",
+    "overrides": {
+        "send": "^0.19.0",
+        "qs": "^6.15.4"
+    }
 }
