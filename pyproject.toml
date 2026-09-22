@@ -21,7 +21,7 @@ dynamic = ["version"]
 
 [dependency-groups]
 dev = ["prek>=0.5.3"]
-release = ["git-cliff>=2.13.1"]
+release = ["git-cliff>=2.14.2"]
 
 [project.urls]
 Documentation = "https://isaac-cf-wong.github.io/presentation-template"
