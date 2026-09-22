@@ -54,4 +54,4 @@ release = [
 
 [package.metadata.requires-dev]
 dev = [{ name = "prek", specifier = ">=0.5.3" }]
-release = [{ name = "git-cliff", specifier = ">=2.13.1" }]
+release = [{ name = "git-cliff", specifier = ">=2.14.2" }]
