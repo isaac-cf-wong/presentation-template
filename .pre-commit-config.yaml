@@ -27,7 +27,7 @@ repos:
           - id: fix-byte-order-marker
 
     - repo: https://github.com/crate-ci/typos
-      rev: v1.50.3
+      rev: typos-dict-v0.14.2
       hooks:
           - id: typos
             args: []
@@ -47,7 +47,7 @@ repos:
                 - .markdownlint.yaml
 
     - repo: https://github.com/thibaudcolas/pre-commit-stylelint
-      rev: v16.26.1
+      rev: v17.16.0
       hooks:
           - id: stylelint
             args: [--fix]
@@ -68,6 +68,6 @@ repos:
           - id: actionlint
 
     - repo: https://github.com/betterleaks/betterleaks
-      rev: v1.9.0
+      rev: v2.0.0-rc.1
       hooks:
           - id: betterleaks
